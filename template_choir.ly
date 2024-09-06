@@ -157,7 +157,10 @@ bassLyric = \lyricmode {
     
     
     % BASS
-    \new SolmisasiStaff {
+    \new SolmisasiStaff \with {
+        vocalName = "B"
+        shortVocalName = "B"
+    } {
     <<
       \new SolmisasiVoice = "voiceBass" { \solmisasiMusic \bass }
       \new NullVoice = "nullBass" { \solmisasiMusic \bass }
