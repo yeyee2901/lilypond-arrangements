@@ -3,7 +3,7 @@ A collection of my:
 - Musical arrangements
 - Transcribed choir (Musical Score -> Solmisasi)
 
-Mostly written using ![lilypond](https://lilypond.org/).
+Mostly written using [lilypond](https://lilypond.org/).
 
 The PDF output files are available in each folders.
 
