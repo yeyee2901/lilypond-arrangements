@@ -17,9 +17,10 @@
 \paper {
   indent = 2.4\mm
   short-indent = 2.4\mm
-  bottom-margin = 3\cm
-  top-margin = 2\cm
+  bottom-margin = 1\cm
+  top-margin = 1\cm
   print-page-number = false
+
   #(define fonts
     (make-pango-font-tree "Linux Libertine O"
                           "Nimbus Sans, Nimbus Sans L"
@@ -61,7 +62,7 @@ sopran = {
     r1*8
     
     % musik antar bait
-    c2 b8 c8 b8 g8
+    c2\mf b8 c8 b8 g8
     f4 f8 g8 b8 c8 b8 c8 \break
     e4 f8 e8 c4 e16 f16 e16 c16 b2. r4
     
@@ -76,9 +77,35 @@ sopran = {
     a8~a8 e8~e8 c8~c8 f8(\break
     f1)\< (f2)  e8 f8 g8 \! a8 a8. \f g8. g4. r4
     
-    g4\ff a4 c4 d4
+    g4\ff a4 c4 d4 \break
 
+    % reff
+    e8. e8. g,8 e'8 e8 d8 c8
+    c8. a8. g8 g8 a8 c8 a8 \pageBreak
+    e'8. d8. g,8 g8 a8 c8 a8
+    e'8. d8. g,8 g8 a8 c8(d8)
+    e8. e8. g,8 e'8 e8 d8 c8
+    c8. a8. g8 g8 a8 c8 a8
+    e'8. d8. g,8 g8 a8 c8 a8
+    e'8. d8. g,8 d'8 d8 c8 b8
+    c4 r4 r4 r4
     
+    % musik 2
+    r1
+    r8[ g16 g8.] g4 g16 g8. g4
+    a16 a8. a4 a16 a8. a4
+    f16 f8. f4 f16 f8. f4
+    g16 g8. g4 g16 g8. g4
+    g16 g8. g4 g16 g8. g4
+    a16 a8. a4 a16 a8. g8 \break
+    a4 a4 b4 c4
+    b2.  g8 g8
+    a4 c4 d4 e4
+    d1 \break
+    g,4 a4 c4 d4
+    
+    \key d \major
+    r8[ a8] r8[ b8] r8[d8] r8[e8]
   }
 }
 
@@ -115,6 +142,34 @@ alto = {
     d2) c8 d8 e8 f8 f8. e8. d4. r4
     
     d4 e4 f4 g4
+    
+    % reff
+    g8. g8. e8 g8 g8 f8 e8
+    g8. f8. e8 e8 f8 g8 e8
+    g8. f8. e8 e8 f8 g8 e8
+    g8. f8. f8 d8 e8 f8(g8)
+    g8. g8. e8 g8 g8 f8 e8
+    g8. f8. e8 e8 f8 g8 e8
+    g8. f8. e8 e8 f8 g8 e8
+    g8. f8. f8 d8 e8 f8 g8
+    e4 r4 r4 r4
+    
+    % musik 2
+    r1
+    e8. e8. e8 e8. e8. e8
+    f8. f8. f8 f8. f8. f8
+    d8. d8. d8 d8. d8. d8
+    e8. e8. e8 e8. e8. e8
+    e8. e8. e8 e8. e8. e8
+    f8. f8. f8 f8. f8. f8
+    f4 f4 f4 f4
+    g2. g8 g8
+    d4 e4 fis4 fis4
+    g1
+    d4 e4 f4 g4
+    
+    \key d \major
+    r8[ e8] r8[ fis8] r8[g8] r8[a8]
   }
 }
 
@@ -153,6 +208,34 @@ tenor = {
     c2.) r4
     
     g4 g4 a4 b4
+    
+    % reff
+    c8. c8. g8 c8 c8 b8 a8
+    g8. a8. g8 g8 a8 b8 c8
+    c8. a8. g8 g8 a8 b8 c8
+    c8. b8. e8 d8 c8 a8(g8)
+    c8. c8. g8 c8 c8 b8 a8
+    g8. a8. g8 g8 a8 b8 c8
+    c8. a8. g8 g8 a8 b8 c8
+    c8. b8. e8 d8 c8 a8 g8
+    c4 r4 r4 r4
+    
+    % musik 2
+    r1
+    c2 g4 c4
+    a2. r4
+    c4. a8 c8 c8 \tuplet 3/2 { d e d }
+    c2. r4
+    g8 g16 g16 g8 g16 g16 g8 g8 r4
+    g8 g16 g16 g8 g16 g16 g8 g8 r8[ g8]
+    a4 a4 b4 c4
+    b2. b8 b8
+    c4 c4 b4 a4
+    c1
+    g4 g4 a4 b4
+    
+    \key d \major
+    r8[ a8] r8[ a8] r8[ b8] r8[ cis8]
   }
 }
 
@@ -191,6 +274,34 @@ bass = {
     g2.) r4
     
     g4 g4 g4 g4
+    
+    % reff
+    c,8. c8. c8 c8 c8 d8 e8
+    f8. f8. f8 e8 d8 c8 e8
+    d8. d8. d8 d8 d8 e8 f8
+    g8. g8. g8 g8 g8 f8(d8)
+    c8. c8. c8 c8 c8 d8 e8
+    f8. f8. f8 e8 d8 c8 e8
+    d8. d8. d8 d8 d8 e8 f8
+    g8. g8. g8 g8 g8 f8 d8
+    c4 r4 r4 r4 \break
+    
+    % musik 2
+    r1
+    c'2 g4 c4
+    a2. r4
+    a4. e8 g8 g8 \tuplet 3/2 { a g a }
+    c2. r4
+    c,8 c16 c16 c8 c16 c16 c8 c8 r4
+    c8 c16 c16 c8 c16 c16 c8 c8 r8[c8]
+    d4 d4 d4 d4
+    e2. e8 e8
+    f4 f4 d4 d4
+    g1
+    g4 g4 g4 g4
+    
+    \key d \major
+    r8[ a8] r8[ a8] r8[ a8] r8[ a8]
   }
 }
 
@@ -200,7 +311,7 @@ unisonoSA = {
      r1*9
      
      % bait bagian unisono SA
-     r8[ e16 g8.] e16 g8. e8 g8 a8
+     r8\mp [ e16 g8.] e16 g8. e8 g8 a8
      g8 f4 c4. f8 e8 \break
      f8 c'4 c4. f,8 e8
      f8 c'4 b4. r4 \break
@@ -230,7 +341,7 @@ unisonoTB = {
      r1*4
      
      % bait 2
-     r8[ e16 g8.] e16 g8. e8 g8 a8
+     r8[ e16\mp g8.] e16 g8. e8 g8 a8
      g8 f4 c4. f8 e8 \break
      f8 c'4 c4. f,8 e8
      f8 c'4 b4. r4 \break
@@ -238,10 +349,24 @@ unisonoTB = {
      g8 f4 c4. f8 e8 \break
      f8 c'4 c4. f,8 e8
      f8 c'4 d4. r4 \break
+     
+     % bridge
+     r1*8
+     
+     % reff
+     r1*8
   }
 }
 
 % LIRIK ----------------------------
+
+reffLyric_A = \lyricmode {
+  A -- ku a -- da lah In -- do -- ne -- sia!
+  ber -- a -- ne -- ka ra -- gam -- nya war -- na war -- ni i -- ra -- ma Oh In -- dah -- nya!
+  A -- ku a -- da -- lah In -- do -- ne -- sia
+  ru -- kun -- lah se -- la -- ma -- nya ber -- dam -- ping -- an ber -- sa -- ma
+  Ki -- ta In -- do -- ne -- sia!
+}
 
 sopranLyric = \lyricmode {
   % intro
@@ -256,6 +381,27 @@ sopranLyric = \lyricmode {
   i tu lah yang mem bu -- at ki -- ta ‘ka -- ya‘
   ha -- rus se -- la -- lu ing -- at
   Oh! oh! oh! oh!
+  
+  % reff cukup di bass aja
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  
+  ding ding ding ding ding ding
+  ding ding ding ding ding ding
+  ding ding ding ding ding ding
+  ding ding ding ding ding ding
+  ding ding ding ding ding ding
+  ding ding ding ding ding,
+  A -- ku In -- do -- ne -- sia
+  Bhin -- ne -- ka Tung -- gal I -- ka
+  Oh! Oh! Oh! Oh!
+  Oh! Oh! Oh! Oh!
 }
 
 altoLyric = \lyricmode {
@@ -263,14 +409,35 @@ altoLyric = \lyricmode {
   In do ne sia
   
   % musik antar bait
-  dung x x x x.. _ _ _ _ _ dung x x x x.. _ _ _ _ _
-  dung x x x x.. _ _ _ _ _ dung..
+  ding din din pa ding _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+  ding din din pa ding _ _ _ _ _ _ 
   
   % bridge
   Tak a -- da yang sa ma
   i tu lah yang mem bu -- at ki -- ta ‘ka -- ya‘
   ha -- rus se -- la -- lu ing -- at
   Oh! oh! oh! oh!
+  
+  % reff cukup di bass aja
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  
+  dung dung dung dung dung dung
+  dung dung dung dung dung dung
+  dung dung dung dung dung dung
+  dung dung dung dung dung dung
+  dung dung dung dung dung dung
+  dung dung dung dung dung,
+  A -- ku In -- do -- ne -- sia
+  Bhin -- ne -- ka Tung -- gal I -- ka
+  Oh! Oh! Oh! Oh!
+  Oh! Oh! Oh! Oh!
 }
 
 tenorLyric = \lyricmode {
@@ -291,6 +458,26 @@ tenorLyric = \lyricmode {
   % bridge
   Huu..
   Oh! oh! oh! oh!
+  
+  % reff cukup di bass aja
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  _ _ _ _ _ _ _
+  
+  % musik 2
+  Hei hei hei hei
+  to -- rang sa -- mua ba su da ra
+  to -- rang sa -- mua ba -- su -- da -- ra
+  to -- rang sa -- mua ba -- su -- da -- ra
+  A -- ku In -- do -- ne -- sia
+  Bhin -- ne -- ka Tung -- gal I -- ka
+  Oh! Oh! Oh! Oh!
+  Oh! Oh! Oh! Oh!
 }
 
 bassLyric = \lyricmode {
@@ -311,6 +498,17 @@ bassLyric = \lyricmode {
   % bridge
   Huu..
   Oh! oh! oh! oh!
+  
+  \reffLyric_A
+  
+  Hei hei hei hei
+  to -- rang sa -- mua ba su da ra
+  to -- rang sa -- mua ba -- su -- da -- ra
+  to -- rang sa -- mua ba -- su -- da -- ra
+  A -- ku In -- do -- ne -- sia
+  Bhin -- ne -- ka Tung -- gal I -- ka
+  Oh! Oh! Oh! Oh!
+  Oh! Oh! Oh! Oh!
 }
 
 
