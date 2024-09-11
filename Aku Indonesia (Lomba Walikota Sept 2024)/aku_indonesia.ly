@@ -9,7 +9,7 @@
   composer = "Arr. by Yeyee (2024)"
   tagline = \markup {
     \typewriter \fontsize #-1 {   
-      "Yeyee - 2024"
+        "Yeyee (2024) - Written Using GNU Lilypond & solmisasi-lily"
     }
   }
 }
@@ -106,7 +106,7 @@ sopran = {
     \key d \major
     r8[ a8] r8[ b8] r8[d8] r8[e8] \pageBreak
     
-    fis8. fis8. a,8 fis'8 fis8 e8 d8
+    fis8. fis8.\ff a,8 fis'8 fis8 e8 d8
     d8. b8. a8 a8 b8 d8 b8
     fis'8. e8. a,8 a8 b8 d8 b8 \break
     fis'8. e8. a,8 a8 b8 d8( e8)
@@ -120,12 +120,27 @@ sopran = {
     e2. r4
     a4 e4 d4 fis8( g8) \break
     
-    fis8\mf fis16 fis16 fis8 fis8 fis4 r4
-    e8 e16 e16 e8 e8 e4 e4\ff
-    eis2 ^\markup { \italic \bold "rit."} eis4 eis4 \break
-    g2. g4
-    a1^\markup{\bold \italic "a tempo"}(
-    a2.) r4 \bar "|."
+    fis8. fis8. a,8 fis'8 fis8 e8 d8
+    d8. b8. a8 a8 b8 d8 b8
+    fis'8. e8. a,8 a8 b8 d8 b8\break
+    fis'8. e8. a,8 a8 b8 d16 e16 (e8)
+    
+    d8.\mp d8. d8 d8 d16 d16 r4 \break
+    d8 d16 d16~d8 d8 d8 d16 d16 r4
+    d8.\mf d8. d8 d8 d16 d16 r4 \break
+    d8 d16 d16~d8 d8 d8 d16 d16 r4
+    r2.
+    d4\ff eis2^\markup{\bold \italic "rit."} eis2\break
+    g2 g2
+    a1(
+    a2.) r4
+    
+    %fis8\mf fis16 fis16 fis8 fis8 fis4 r4
+    %e8 e16 e16 e8 e8 e4 e4\ff
+    %eis2 ^\markup { \italic \bold "rit."} eis4 eis4 \break
+    %g2. g4
+    %a1^\markup{\bold \italic "a tempo"}(
+    %a2.) r4 \bar "|."
   }
 }
 
@@ -202,12 +217,28 @@ alto = {
     b2 a2
     g2 fis8 e16 fis16 g8 e8
     cis4. d8 e4 a8( b8)
-    a8 a16 a16 a8 a8 a4 r4
-    g8 g16 g16 g8 g8 g4 g4
-    g2 g4 g4
-    g2. g4
+    
+    a8. a8. fis8 a8 a8 g8 fis8
+    a8. g8. fis8 fis8 g8 a8 fis8
+    a8. g8. fis8 fis8 g8 a8 fis8
+    a8. g8. g8 e8 fis8 g16 a16( a8)
+    fis8 e16 fis16 g8 e8 fis8 e16 fis16 g8 e8
+    fis8 e16 fis16 g8 e8 fis8 e16 fis16 g8 e8
+    a8. a8. a8 a8 a16 a16 r4
+    a8 a16 a16~a8 a8 a8 a16 a16 r4
+    r2. d,4
+    g2 g2
+    g2 g2
     a1(
     a2.) r4
+    
+    
+    %a8 a16 a16 a8 a8 a4 r4
+    %g8 g16 g16 g8 g8 g4 g4
+    %g2 g4 g4
+    %g2. g4
+    %a1(
+    %a2.) r4
   }
 }
 
@@ -293,12 +324,30 @@ tenor = {
     d2 a8 b8 d8 fis8
     e2. r4
     e4 cis8 d8 e8 cis8 d8( e8)
-    d8 d16 d16 d8 d8 d4 r4
-    d8 d16 d16 d8 d8 d4 e4
     
-    d2 d4 d4
-    e2. e4
-    fis1 (fis2.) r4
+    d8. d8. a8 d8 d8 cis8 b8
+    a8. b8. a8 a8 b8 cis8 d8
+    d8. b8. a8 a8 b8 cis8 d8
+    d8. cis8. fis8 e8 d8 b16 a16( a8)
+    
+    a8 a8(a8) a8 a8 a8(a8) a8
+    a8 a8(a8) a8 a8 a8(a8) a8
+    d8. d8. a8 d8 d16 d16 r4
+    d8 d16 d16~d8 a8 d8 d16 d16 r4
+    r2. a4
+    d2 d2
+    e2 e2
+    fis1(
+    fis2.) r4
+    
+    
+    
+    %d8 d16 d16 d8 d8 d4 r4
+    %d8 d16 d16 d8 d8 d4 e4
+    
+    %d2 d4 d4
+    %e2. e4
+    %fis1 (fis2.) r4
     
   }
 }
@@ -386,12 +435,28 @@ bass = {
     b2) g8 fis8 e8 d8
     a'2. fis8( e8)
     
-    d8 d16 d16 d8 d8 d4 r4
-    d8 d16 d16 d8 d8 d4 c4
-    ais2 ais4 ais4
-    c2. c4
+    d8. d8. d8 d8 d8 e8 fis8
+    g8. g8. g8 fis8 e8 d8 fis8
+    e8. e8. e8 e8 e8 fis8 g8
+    a8. a8. a8 a8 a8 g16 e16(e8)
+    
+    d8. d8. d4. a'8 a8
+    d,8. d8. d4. a'8 a8
+    d,8. d8. d8 d8 d16 d16 r4
+    d8 d16 d16~d8 d8 d8 d16 d16 r4
+    
+    r2. c4
+    ais2 ais2
+    c2 c2
     d1(
     d2.) r4
+    
+    %d8 d16 d16 d8 d8 d4 r4
+    %d8 d16 d16 d8 d8 d4 c4
+    %ais2 ais4 ais4
+    %c2. c4
+    %d1(
+    %d2.) r4
     
   }
 }
@@ -498,6 +563,15 @@ sopranLyric = \lyricmode {
   
   Bu -- da -- ya dan ba -- ha -- sa
   In -- dah -- nya Oh!
+  Ki -- ta ber -- a -- ne -- ka ra -- gam -- nya,
+  ber -- a -- ne -- ka bu -- da -- ya,
+  ber -- a -- ne -- ka ba -- ha -- sa,
+  ser -- ta tra -- di -- si
+  A -- ku In -- do -- ne -- sia!
+  Bhin -- ne -- ka Tung -- gal I -- ka!
+  A -- ku In -- do -- ne -- sia!
+  Bhin -- ne -- ka Tung -- gal I -- ka!
+  A -- ku In -- do -- ne -- sia!
 }
 
 altoLyric = \lyricmode {
@@ -540,6 +614,14 @@ altoLyric = \lyricmode {
   Ba -- ha -- sa
   dan su -- ku bang -- sa
   In -- dah -- nya Oh!
+  Ki -- ta ber -- a -- ne -- ka ra -- gam -- nya,
+  ber -- a -- ne -- ka bu -- da -- ya,
+  ber -- a -- ne -- ka ba -- ha -- sa,
+  ser -- ta tra -- di -- si
+  ding din din pa ding x x x... _ _ ding din din pa ding x x x... _ _
+  A -- ku In -- do -- ne -- sia!
+  Bhin -- ne -- ka Tung -- gal I -- ka!
+  A -- ku In -- do -- ne -- sia!
 }
 
 tenorLyric = \lyricmode {
@@ -593,7 +675,16 @@ tenorLyric = \lyricmode {
   In -- dah ne -- g'ri -- ku
   In -- dah ne -- g'ri -- ku
   Oh!
+  Ki -- ta ber -- a -- ne -- ka ra -- gam -- nya,
+  ber -- a -- ne -- ka bu -- da -- ya,
+  ber -- a -- ne -- ka ba -- ha -- sa,
+  ser -- ta tra -- di -- si
   
+  dung dung, dung dung dung, dung
+  dung dung, dung dung dung, dung
+  A -- ku In -- do -- ne -- sia!
+  Bhin -- ne -- ka Tung -- gal I -- ka!
+  A -- ku In -- do -- ne -- sia!
 }
 
 bassLyric = \lyricmode {
@@ -640,10 +731,15 @@ bassLyric = \lyricmode {
   Ki -- ta ber -- a -- ne -- ka ra -- gam
   In -- dah ne -- g'ri -- ku
   Oh!
-  
+  Ki -- ta ber -- a -- ne -- ka ra -- gam -- nya,
+  ber -- a -- ne -- ka bu -- da -- ya,
+  ber -- a -- ne -- ka ba -- ha -- sa,
+  ser -- ta tra -- di -- si
+  Dung dung dung, dam dam
+  Dung dung dung, dam dam
   A -- ku In -- do -- ne -- sia!
-  Ki -- ta In -- do -- ne -- sia!
   Bhin -- ne -- ka Tung -- gal I -- ka!
+  A -- ku In -- do -- ne -- sia!
 }
 
 
