@@ -1,13 +1,12 @@
 \version "2.20.0"
 \include "solmisasi.ily"
-\language "solmisasi"
 #(set-default-paper-size "a4")
 
 % ---- PAPER SETTINGS -----
 \header {
-  title = "Aku Indonesia"
-  poet = "Naura Ayu"
-  composer = "Arr. by Yeyee (2024)"
+  title = "Lord, Hear My Prayer"
+  subtitle = "(Traditional Spritual, a capella)"
+  composer = "Moses Hogan"
   tagline = \markup {
     \typewriter \fontsize #-1 {   
       "Yeyee - 2024"
@@ -33,58 +32,9 @@
 %  ---- MUSICAL MARKUPS ------------
 headerMusicGlobal = {
   \time 4/4
-  \key c \major
+  \key es \major
 }
 % ----------------------------------
-
-
-% naik oktaf = pakai ' (kutip 1)
-% turun oktaf = pakai , (koma)
-sopran = {
-  \relative c' {
-    mi1 fa1 sol1 la1 si1 do1 re1
-  }
-}
-
-alto = {
-  \relative c' {
-    do1 re1 mi1 fa1 sol1 la,1 si1
-  }
-}
-
-tenor = {
-  \relative c' {
-    mi1 fa1 sol1 la1 si1 do1 re1
-  }
-}
-
-bass = {
-  \relative c' {
-    do1 re1 mi1 fa1 sol1 la,1 si1
-  }
-}
-
-% LIRIK ----------------------------
-
-sopranLyric = \lyricmode {
-  NNNNN
-}
-
-altoLyric = \lyricmode {
-  Aaaaaa
-}
-
-tenorLyric = \lyricmode {
-  Aaaaaa
-}
-
-bassLyric = \lyricmode {
-  Aaaaaa
-}
-
-
-% ---------------------------------
-
 
 % SCORE ---------------------------
 
@@ -96,29 +46,27 @@ bassLyric = \lyricmode {
   
   \new ChoirStaff {
   << 
+    
     % SOPRAN
-    %{ 2 BAIT LIRIK DALAM 1 BARIS
-      menambahkan 2 bait bisa menggunakan null voice,
-      yaitu voice staff yang tidak akan di print, namun mengikuti
-      kerangka voice yang berada pada konteks yang sama.
-      contoh dapat dilihat pada bagian sopran berikut, menggunakan 2 voice,
-      SolmisasiVoice & NullVoice
-    %}
     \new SolmisasiStaff \with {
       vocalName = "S"
       shortVocalName = "S"
     } {
     <<
-      \new SolmisasiVoice = "voiceSopran" { \solmisasiMusic \sopran }
-      \new NullVoice = "nullSopran" { \solmisasiMusic \sopran }
+      \new SolmisasiVoice = "voiceSopran" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \relative es' {            
+            \clef treble
+            es1
+          }
+        }
+      }
     >>  
     }
     \new Lyrics \with {
     } \lyricsto "voiceSopran" {
-        \sopranLyric
-    }
-    \new Lyrics \lyricsto "nullSopran" {
-        \sopranLyric
+      u
     }
     
     
@@ -129,13 +77,20 @@ bassLyric = \lyricmode {
       shortVocalName = "A"
     } {
     <<
-      \new SolmisasiVoice = "voiceAlto" { \solmisasiMusic \alto }
-      \new NullVoice = "nullAlto" { \solmisasiMusic \alto }
+      \new SolmisasiVoice = "voiceAlto" {
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \relative es' {
+            \clef treble
+            bes1
+          }
+        }
+      }
     >>  
     }
     \new Lyrics \with {
-    } \lyricsto "nullAlto" {
-        \altoLyric
+    } \lyricsto "voiceAlto" {
+      u
     }
     
     
@@ -145,30 +100,44 @@ bassLyric = \lyricmode {
       shortVocalName = "T"
     } {
     <<
-      \new SolmisasiVoice = "voiceTenor" { \solmisasiMusic \tenor }
-      \new NullVoice = "nullTenor" { \solmisasiMusic \tenor }
+      \new SolmisasiVoice = "voiceTenor" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \relative es'' {
+            \clef "treble_8"
+             bes1
+          }
+        }
+      }
     >>  
     }
     \new Lyrics \with {
-    } \lyricsto "nullTenor" {
-        \tenorLyric
+    } \lyricsto "voiceTenor" {
+      u
     }
     
     
     
     % BASS
     \new SolmisasiStaff \with {
-        vocalName = "B"
-        shortVocalName = "B"
+      vocalName = "B"
+      shortVocalName = "B"
     } {
     <<
-      \new SolmisasiVoice = "voiceBass" { \solmisasiMusic \bass }
-      \new NullVoice = "nullBass" { \solmisasiMusic \bass }
+      \new SolmisasiVoice = "voiceBass" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \relative es {
+            \clef bass
+            es1
+          }
+        }
+      }
     >>  
     }
     \new Lyrics \with {
-    } \lyricsto "nullBass" {
-        \bassLyric
+    } \lyricsto "voiceBass" {
+        
     }
   >> 
   }
