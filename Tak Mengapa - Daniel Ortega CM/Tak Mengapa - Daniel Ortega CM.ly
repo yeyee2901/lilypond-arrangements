@@ -4,21 +4,42 @@
 
 % ---- PAPER SETTINGS -----
 \header {
-  title = "[UNTITLED DRAFT SONG]"
-%  subtitle = ""
+  title = "Tak Mengapa"
+
   poet = "Daniel Ortega CM"
-  composer = "arr. by Yeyee"
+  composer = "arr. by Yeyee"  
   tagline = \markup {
-    \typewriter \fontsize #-1 {   
-      "Transcribed by Yeyee using GNU Lilypond & solmisasi-lily - 2024"
+    \override #'(box-padding . 1.0)
+    \override #'(baseline-skip . 2.7)
+    \box \center-column {
+      \small {
+        \line {
+          Transcribed and arranged by Yeyee
+          • \italic Free to download, with the \italic freedom to distribute,
+          modify and perform.
+          
+        }
+        \line { gabriel777sh@gmail.com } 
+        \line {
+          Typeset using 
+          \with-url "http://www.lilyPond.org"
+          \concat { \bold { \tiny www. LilyPond \tiny .org } } 
+          and 
+          \with-url "https://henriyulianto.github.io/solmisasi-lily"
+          \italic \bold solmisasi-lily
+        }
+        \line { rev 1.1 }
+      }
     }
   }
 }
+
 
 \paper {
   indent = 2.4\mm
   short-indent = 2.4\mm
   left-margin = 1.3\cm
+  top-margin = 0.5\cm
   print-page-number = false
   #(define fonts
     (make-pango-font-tree "Linux Libertine O"
@@ -58,6 +79,7 @@ markMarcatto = \markup {
 intro = {
   \relative es' {
     s2
+    \set Score.currentBarNumber = #1
     es8  ^\markup{\bold "Intro:"}  f8 g8 bes8
     c4 d4 es8 d16 c16 bes8 as8
     g4 f8 g16 f16 es2
@@ -588,7 +610,7 @@ unisonoSA = {
     r2 * 10
     
     % bait 1
-    g4.-\tweak extra-offset #'(1 . -1)\mp bes8 
+    g4.-\tweak extra-offset #'(0 . -0.2)^\markup{"unisono"} bes8 
     f8 g8 as8 bes8
     g4. f8 
     es2
@@ -743,6 +765,7 @@ lyricBass = \lyricmode {
 
 %  ---- MUSICAL MARKUPS ------------
 headerMusicGlobal = {
+  \tempo "Andante"
   \time 2/4
   \key es \major
 }
@@ -781,8 +804,8 @@ headerMusicGlobal = {
     
     % UNISONO
     \new SolmisasiStaff \with {
-      vocalName = "SA"
-      shortVocalName = "SA"
+      vocalName = ""
+      shortVocalName = ""
     } {
     <<
       \new SolmisasiVoice = "voiceUnisonoSA" { 
@@ -927,5 +950,8 @@ headerMusicGlobal = {
     \line {
       - Daniel Ortega CM, Tor Sapienza, 19 September 2024
     }
+    \line{ " " }
+    \line{*bagian unisono dapat dinyanyikan oleh S / T}
+    \line{*bawakan lagu ini dengan tempo santai sekitar 70-77 BPM}
   }
 }
