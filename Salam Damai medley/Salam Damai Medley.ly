@@ -58,6 +58,7 @@ cantusFirmus = \markup {
 % CHORDS ---------------------------
 chordNames = {
   \chordmode {
+    \set noChordSymbol = ""
     s1
     
     % bait salam damai
@@ -88,6 +89,34 @@ chordNames = {
     g1:m
     bes2 a2
     d2:sus4 d2
+    
+    % dalam kristus
+    r4 r4 r4 r4
+    g1 
+    d1:7
+    g1
+    g1
+    d1:7
+    d1:7
+    g1
+    r4 g4 g4/a g4:7/b
+    c1
+    c1
+    g2 b2:m/fis
+    e1:m
+    a1:m
+    d1:7
+    g1
+    
+    % coda
+    r4 g4 g4/a g4:7/b
+    c1 
+    c2:m g4/d d4:7
+    g2 b4:m b4
+    e4:m r4 r4 e4
+    a1:m
+    d1:7
+    g1
   }
 }
 
@@ -138,7 +167,7 @@ voiceTB = {
     bes4 a8 bes4. r8[ g8]
     f8 f8 f8 f8 e8 e8 f8 e8
     d1
-
+    \key g \major
   }
 }
 
@@ -167,9 +196,35 @@ voiceSoprano = {
     bes8 bes8 bes8 bes8 a8 a8 bes8 c8
     d1
     
-
-    % bridge
+    % dalam kristus kita bersaudara
+    \key g \major
+    r1
+    r4 d8 d4 c8 d8( e8)
+    d2. r4
+    r4 d8 d4 e8 d8 c8 \break
+    b4 d4 e4 d4
+    a1
+    r4 d8 d8 \tuplet 3/4 { e d c }
+    b1\break
     
+    r4 g4 a4 b4
+    c4 c8 c8 \tuplet 3/4 { c c c }
+    c2 d4 c4
+    b4 b8 a8 b4 a4\break
+    g4 d4 g4 b4
+    a1
+    r4 a8 b8 \tuplet 3/4 { c b a }
+    g1 \break
+    
+    r4^\markup{\bold Coda}
+    g4 a4 b4
+    c4 c8 c8 \tuplet 3/4 { c c c }
+    c2 d4 c4
+    b4 b8 a8 b4 a4\break
+    g4 d4 g4 b4
+    a1
+    r4 a8^\markup{ \italic \bold "rit." } b8 \tuplet 3/4 { c b a }
+    g1 \bar "||" 
   }
 }
 
@@ -197,20 +252,102 @@ voiceAlto = {
     d2. r8[ f8]
     g8 g8 g8 g8 a8 a8 g8 a8
     g2( fis2)
+    
+    \key g \major
+    r1
+    r4 b8 b4 a8 a8( g8)
+    fis2. r4
+    r4 g8 g4 a8 g8 fis8
+    g4 g4 a4 g4
+    fis1
+    r4 g8 g8 \tuplet 3/4 { a g fis }
+    g1
+    r4 g4 fis4 f4 
+    e4 e8 e8 \tuplet 3/4 { e e fis }
+    g2 b4 a4
+    g4 d8 e8 fis4 fis4
+    e4 d4 c4 b4
+    c1
+    r4 d8 e8 \tuplet 3/4 { fis fis e }
+    d1
+    
+    % coda
+    r4 g4 fis4 f4 
+    e4 e8 e8 \tuplet 3/4 { e e fis }
+    g2 b4 a4
+    g4 d8 e8 fis4 fis4
+    e4 d4 c4 b4
+    c1
+    r4 d8 e8 \tuplet 3/4 { fis fis e }
+    d1
   }
 }
 
 voiceTenor = {
   \relative f' {
     \clef bass
-
+    r1 * 25
+    
+    % dalam kristus kita bersaudara
+    \key g \major
+    r4 d4 g4 a4 
+    b1
+    r4 c8 d8 \tuplet 3/4 { e d c }
+    b1
+    r1
+    c2( b2
+    a4) d8 d8 \tuplet 3/4 { c b c }
+    d1
+    r1
+    c8 c8 r8[ d8] e4 r4
+    c8 c8 c8 c8 d4 c4
+    d2 d2
+    b2. r4
+    a8 a8 a8 a8 a8 b8 c8 cis8
+    d4 d8 e8 \tuplet 3/4 { d d c }
+    b1
+    r4 b4 c4 d4
+    e4 e8 e8 \tuplet 3/4 { e e e }
+    dis2 d4 d4
+    d4 b8 c8 d4 c4
+    b4 b4 a4 gis4
+    a2 r8[ b8] c8 cis8
+    d4 d8 e8 \tuplet 3/4 { d d c }
+    b1
   }
 }
 
 voiceBass = {
   \relative f' {
     \clef bass
-
+    r1 * 25
+    
+    % dalam kristus kita bersaudara
+    \key g \major
+    r4 d4 g4 a4 
+    b1
+    r4 a8 b8 \tuplet 3/4 { c b a }
+    g1
+    r1
+    d2( e2
+    fis4) d8 d8 \tuplet 3/4 { d e fis }
+    g1
+    r1
+    g8 g8 r8[ g8] g4 r4
+    e8 e8 e8 fis8 g4 fis4
+    g2 fis2
+    e2. r4
+    a8 a8 a8 a8 a8 g8 fis8 e8
+    d4 d8 d8 \tuplet 3/4 { d e fis }
+    g1
+    r4 g4 g4 g4
+    c,4 c8 c8 \tuplet 3/4 { c c c }
+    c2 d4 d4
+    g4 g8 g8 d4 dis4
+    e4 e4 fis4 gis4 
+    a2 r8[ g8] fis8 e8
+    d4 d8 d8 \tuplet 3/4{ d d d }
+    g1
   }
 }
 
@@ -236,6 +373,17 @@ lyricVoiceAlto = \lyricmode {
   Sa -- lam,
   Sa -- lam,
   Sa -- lam da -- mai da -- lam Ye -- sus Tu -- han
+  
+  Di da -- lam Kris -- tus
+  Ki -- ta ber -- sau -- da -- ra
+  Da -- lam Kris -- tus
+  Ki -- ta ber -- sau -- da -- ra
+  Da -- lam Kris -- tus ki -- ta ber -- sau -- da -- ra
+  Se -- ka -- rang dan se -- la -- ma -- nya
+  Da -- lam Kris -- tus ki -- ta ber -- sau -- da -- ra
+  Da -- lam Kris -- tus ki -- ta ber -- sau -- da -- ra
+  Se -- ka -- rang dan se -- la -- ma -- nya
+  Da -- lam Kris -- tus ki -- ta ber -- sau -- da -- ra
 }
 
 lyricVoiceTB = \lyricmode {
@@ -256,6 +404,23 @@ lyricVoiceTB = \lyricmode {
   Sa -- lam da -- mai, da -- lam Ye -- sus Tu -- han
   Sa -- lam da -- mai, da -- lam Ye -- sus Tu -- han
   Sa -- lam da -- mai, da -- lam Ye -- sus Tu -- han
+}
+
+lyricVoiceTenor = \lyricmode {
+}
+
+lyricVoiceBass = \lyricmode {
+  Da -- lam Kris -- tus ki -- ta ber -- sau -- da -- ra
+  Huuu...
+  Ki -- ta ber -- sau -- da -- ra
+  Da -- lam Kris -- tus
+  Ki -- ta ber -- sau -- da -- ra
+  S'la -- ma -- nya
+  Da -- lam Kris -- tus s'la -- ma la -- ma -- nya
+  Ki -- ta ber -- sau -- da -- ra
+  Da -- lam Kris -- tus ki -- ta ber -- sau -- da -- ra
+  Se -- ka -- rang dan se -- la -- ma -- nya.
+  Da -- lam Kris -- tus, da -- lam Kris -- tus, ki -- ta ber -- sau -- da -- ra
 }
 
 %  ---- MUSICAL MARKUPS ------------
@@ -378,7 +543,7 @@ headerMusicGlobal = {
     }
     \new Lyrics \with {
     } \lyricsto "voiceTenor" {
-      u
+      \lyricVoiceTenor
     }
     
     
@@ -399,7 +564,7 @@ headerMusicGlobal = {
     }
     \new Lyrics \with {
     } \lyricsto "voiceBass" {
-        
+      \lyricVoiceBass
     }
   >> 
   }
@@ -422,5 +587,7 @@ headerMusicGlobal = {
   \left-column{
     \line { \draw-hline }
     \line{*bawakan lagu ini dengan tempo bersemangat sekitar 108-110 BPM}
+    \line{*bagian 'Dalam Kristus' dapat dilagukan berulang-ulang (sebelum masuk Coda)}
+    \line{ sesuai kebutuhan}
   }
 }
