@@ -4,8 +4,8 @@
 
 % ---- PAPER SETTINGS -----
 \header {
-  title = "Hymne Santo Stanislaus"
-  poet = "Lembut, mengalun"
+  title = "Hymne Santo Stanislaus Kostka"
+  poet = "Lembut-mengalun (M.M 75-80)"
   composer = "Yeyee (2024)"  
   tagline = \markup {
     \override #'(box-padding . 1.0)
@@ -88,7 +88,7 @@ voiceI = {
   \relative es' {            
     \clef treble
     s1 * 4\break
-    g2 c2
+    g4. g8 c4 c4
     d4 b4 c4 b8 a8
     g4 a4 g4 f8 e8
     d2 r4 e8 f8\break
@@ -96,10 +96,10 @@ voiceI = {
     g2 c2
     b4 a8 b8 c4 b8 a8
     g4. a8 f8 e8 d4
-    c2 r4 r8[ c8] \break
+    c2. r8[ c8] \break
     
-    f8 e8 f8 g8 a4 g8 f8
-    e8 d8 e8 f8 g4. e8
+    f8( e8) f8( g8) a4 g8( f8)
+    e8( d8) e8( f8) g4. e8
     d8 c8 d8 e8 f4 g4
     e2 r4 d8 e8\break
     
@@ -108,7 +108,7 @@ voiceI = {
     a4. a8 b4 c4
     d2. r4
     
-    g,2 c2
+    g,4. g8 c4 c4
     d4 b4 c4 b8 a8
     g4 a4 g4 f8 e8
     d2 r4 e8 f8\pageBreak
@@ -125,7 +125,7 @@ voiceII = {
   \relative es' {            
     \clef treble
     s1 * 4\break
-    c4.( d8) e2
+    c4. d8 e4 e4
     f4 g8( f8) e4 e8 d8
     c4 d4 e4 d8 c8
     b2 r4 a8 b8
@@ -133,24 +133,24 @@ voiceII = {
     c4.( d8) e2
     d4 e8 f8 e4 e8 e8
     d4. d8 d8 c8 b4
-    c2 r4 r8[ c8]
+    c2. r8[ c8]
     
-    d8 c8 d8 e8 f4 e8 d8
-    c8 b8 c8 d8 e4. c8
-    a8 a8 b8 c8 d4 d4
+    d8( c8) d8( e8) f4 e8( d8)
+    c8( b8) c8( d8) e4. c8
+    a8 a8 b8 c8 d4 b4
     c2 r4 b8 c8
     d8 c8 d8 e8 f4 g8 f8
     e8 dis8 e8 f8 e2
     d4. d8 e4 fis4
     g2. r4
     
-    c,4.( d8) e2
+    c,4. d8 e4 e4
     f4 g8( f8) e4 e8 d8
     c4 d4 e4 d8 c8
     b2 r4 a8 b8
     c4.( d8) e2
-    f4 e8 d8 c2
-    d8 e8 f8 g8 a4 g8 f8
+    f4 f8 e8 d2
+    d8 e8 f8 g8 a4 g8( f8)
     e1
   }
 }
@@ -159,26 +159,26 @@ voiceIII = {
   \relative es' {            
     \clef treble
       s1 * 4
-      e2 g2
+      e4. f8 g4 g4
       a4 g4 a4 g8 f8
       e4 f4 g4 a8 a8
       g2 r4 g8 f8
       
       e2 g2
-      gis4 a8 gis8 a4 a8 a8
+      a4 a8 gis8 a4 a8 a8
       g4. f8 f8 f8 f4
-      e2 r4 r8[ g8]
+      e2. r8[ g8]
       
-      a8 g8 f8 e8 d4 e8 f8
-      g8 a8 g8 b8 c4. b8
+      a8( g8) f8( e8) d4 e8( f8)
+      g8( a8) g8( b8) c4. b8
       a8 g8 f8 e8 d4 g4
       g2 r4 g8 g8
       a8 g8 f8 e8 d4 b'8 a8
-      gis8 gis8 a8 gis8 a2
+      gis8 gis8 gis8 gis8 a2
       fis4. g8 a4 a4
       b2. r4
       
-      e,2 g2
+      e,4. f8 g4 g4
       a4 g4 a4 g8 f8
       e4 f4 g4 a8 a8
       g2 r4 g8 f8
@@ -190,13 +190,13 @@ voiceIII = {
 }
 
 lyricVoiceOneTwo = \lyricmode {
-   San -- to Sta -- ni -- slaus X X X X X X X X de -- ngan
-   te -- kad 'tuk meng -- ab -- di pang -- gil -- an di ja -- lan Kris -- tus
-   Di -- -tem -- puh -- nya ja -- lan, di -- om -- bang -am -- bing du -- nia,
-   te -- tap -- lah ku -- at i -- man -- nya.
+   San -- to Sta -- ni -- slaus Kost -- ka pe -- lin -- dung pa -- ra pe -- la -- jar
+   de -- ngan te -- kad 'tuk meng -- ab -- di pang -- gil -- an di ja -- lan Kris -- tus
+   "\"Ad" -- Ma -- i -- o -- ra Na -- tus "Sum\""
+   'ku la -- hir 'tuk hal -hal lu -- hur 
    Wa -- lau ba -- nyak rin -- tang -- an, se -- ti -- a di ja -- lan -- NYA
    Lu -- hur mu -- li -- a
-   San -- to Sta -- ni -- slaus X X X X X X X X
+   San -- to Sta -- ni -- slaus Kost -- ka pe -- lin -- dung pa -- ra pe -- la -- jar
    'kan ku ta -- nam da -- lam ha -- ti te -- kad peng -- ab -- di -- an -- mu
 }
 
@@ -304,7 +304,7 @@ headerMusicGlobal = {
   \left-column{
     \line { \draw-hline }
     \line { Catatan penulis: }
-    \line { *Suara I dapat dinyanyikan oleh Sopran, sedangkan suara II dapat dinyanyikan }
+    \line { *Suara I dinyanyikan oleh Sopran, sedangkan suara II dapat dinyanyikan }
     \line { oleh Alto. }
     \line { *Suara III dapat dinyanyikan oleh oleh pria (Tenor-Baritone-Bass) }
   }
