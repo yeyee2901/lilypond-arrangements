@@ -36,7 +36,7 @@
   short-indent = 2.4\mm
   left-margin = 1.3\cm
   top-margin = 0.5\cm
-  print-page-number = false
+ % print-page-number = false
   #(define fonts
     (make-pango-font-tree "Linux Libertine O"
                           "Nimbus Sans, Nimbus Sans L"
@@ -118,13 +118,44 @@ chordNames = \chordmode {
   fis1
   g1
   a1/g
-  b2.:m a8 b8:m
+  b2.:m fis8:m b8:m
   r1
   e2.:m r8 e8:m
   fis4:m d4/fis fis4 r8 fis8
   b1:m
   fis1:sus4
   fis1
+  
+  % bagian slow after fermata
+  r1
+  b1:m 
+  fis1:m/a
+  e1:m
+  fis1
+  b1:m
+  fis1:m/a
+  e1:m
+  fis4:sus4 fis2.
+  e1:m7
+  \set additionalPitchPrefix = "add"
+  <a, b cis e >1
+  \unset additionalPitchPrefix
+  d2 a2/cis
+  b1:m
+  fis2.:m/a b4:m
+  e1:m7
+  e1:m7
+  fis1:sus4
+  fis1:7
+  b1:m
+  fis1:m/a
+  e1:m
+  fis2. fis4:7
+  b1:m
+  fis1:m/a
+  e1:m7
+  fis2:sus4 fis2
+  b1:m
 }
 
 voiceInst = {
@@ -206,7 +237,38 @@ voiceSopran = {
     cis4 d4 cis4 r8[ cis8]
     d4^\accentMark -\tweak X-offset #4 \< cis8 b8( b8) cis4\! cis8(-\tweak X-offset #1.5 \ff
     cis1)(
-    cis2)^\fermataMark r2
+    cis2)^\fermataMark r2 \break
+    
+    % bar 59, bagian pelan
+    fis,4-\tweak X-offset #1.3 \mp^\markup{ \italic \bold "slight rit."} e4 r4 d8 cis8
+    b2^\markup{\italic \bold "a tempo"}( b8) b8 fis'8 e8(
+    e4) d8 cis8( cis4) r8[ cis8]
+    b4 cis8 d8( d8) e4 d8(
+    d8) cis8( cis8) r8 b8 cis8 d8 e8
+    fis2( fis8) b,8 fis'8 e8(
+    e4) d8 cis8( cis4) r8[ cis8]
+    b8\< cis4 d8( d8) e4 g8(
+    g8) fis4.\! r8[ fis8]\f b8 b8(\break
+    b2)( b8) cis8 d8 cis8(
+    cis4) b8 a8( a4) r8[ e8]
+    fis8 a4 d8( d8) cis4 b8(
+    b1)\> \pageBreak\!
+    
+    % ending
+    r2 r4 fis4\mp
+    g4 fis8 e8( e4) d8 e8(
+    e8) fis4. r4^\markup{ \italic \bold "rit. & freely"}  d8 e8
+    fis2.\< r4\! \break
+    as2.^\markup{ \italic \bold "freely, do not rush" }( b4)
+    b1\ff( -\tweak X-offset #3.5 ^\markup{ \italic \bold "a tempo" }
+    cis1)
+    r1\break
+    r4 r8[ fis,8] fis4 as4
+    b1(
+    cis1)
+    r1^\markup{ \italic \bold "rit." } \break
+    r2 fis,8\mp e8 d8 cis8
+    b1^\fermataMark \bar "||"
   }
 }
 
@@ -273,8 +335,39 @@ voiceAlto = {
     \tweak X-offset #1.2 g4 g4 g4 r8[ g8]
     a4 a4 as4 r8[ as8]
     b4 a8 fis8( fis8) b4 b8(
-    b1)
-    as2 r2
+    b1)(
+    as2) r2
+    
+    % part slow after fermata
+    fis4 e4 r4 d8 cis8
+    b2( b8) b8 d8 cis8(
+    cis4) b8 a8( a4) r8[ cis8]
+    b4 cis8 d8( d8) e4 d8(
+    d8) cis8( cis8) r8 r2
+    r8[ b8] cis8 d8( d8) b8 d8 cis8(
+    cis4) b8 a8( a4) r8[ cis8]
+    b8 cis4 d8( d8) e4 g8(
+    g8) fis4. r8[ fis8] g8 g8(
+    g2)( g8) a8 b8 a8(
+    a4) fis8 e8( e4) r8[ e8]
+    fis8 a4 b8( b8) a4 fis8(
+    fis1)
+    
+    % ending
+    r2 r4 fis4
+    g4 fis8 e8( e4) d8 e8(
+    e8) fis4. r4 d8 e8
+    fis2. r4
+    g2.( fis4)
+    fis1(
+    fis1)
+    r1
+    r4 r8[ fis8] fis4 g4
+    fis1(
+    fis1)
+    r1
+    r2 fis8 e8 d8 cis8
+    b1
   }
 }
 
@@ -336,6 +429,38 @@ voiceTenor = {
     fis4 \override Beam.positions = #'(2 . 2) e8 \override Beam.positions = #'(2 . 2) d8( d8)  <b fis'>4 <cis( fis(>8
     <cis)( fis)(>1 
     <cis) fis)>2 r2
+    
+    % bagian slow after fermata
+    r1
+    r2 b2(
+    a1)
+    r2 g2(
+    fis1)
+    r8[ fis8] fis8 b8( b8) fis8 b8 a8(
+    a4) fis8 fis8( fis4) r8[ cis8]
+    b8 cis4 d8( d8) e4 g8(
+    g8) fis4. r8[ fis8] d'8 d8(
+    d2)( d8) e8 fis8 e8(
+    e4) d8 cis8( cis4) r8[ e,8]
+    fis8 a4 fis'8( fis8) e4 d8(
+    d1)
+    
+    % ending
+    r2 r4 fis,4
+    g4 fis8 e8( e4) d8 e8(
+    e8) fis4. r4 d8 e8
+    fis2. r4
+    e'1
+    d1(
+    d1)
+    r1
+    r4 r8[ fis,8] fis4 e'4
+    d1(
+    d1)
+    r1
+    r2
+    fis,8 as8 b8 cis8
+    b1
   }
 }
 
@@ -398,6 +523,36 @@ voiceBass = {
     fis1)(
     fis2) r2
     
+    % bagian slow after fermata
+    r1
+    r2 b2(
+    a1)
+    r2 g2(
+    fis1)
+    r8[ fis8] fis8 b8( b8) fis8 b8 a8(
+    a4) fis8 fis8( fis4) r8[ cis8]
+    b8 cis4 d8( d8) e4 g8(
+    g8) fis4. r8[ fis8] e8 e8(
+    e2)( e8) e8 e8 a8(
+    a4) a8 a8( a4) r8[ e8]
+    fis8 a4 d8( d8) cis4 b8(
+    b1)
+    
+    % ending
+    r2 r4 fis4
+    g4 fis8 e8( e4) d8 e8(
+    e8) fis4. r4 d8 e8
+    fis2. r4
+    cis'1
+    b1(
+    a1)
+    r1
+    r4 r8[ fis8] fis4 fis4
+    b1(
+    a1)
+    r1
+    r2 fis8 as8 b8 cis8
+    b1
   }
 }
 
@@ -427,7 +582,17 @@ lyricsSopran = \lyricmode {
   did you know?
   The _ _ _
   _ _ _ _
-  _ _ _ _ _ 
+  _ _ _ _ _
+  _ _ _ _ _
+  _ _ _ _ _
+  _ _ _ _ _
+  _ _ _ _
+  _ _ _
+  _ _ _
+  _ _ _ _ _
+  _ _ Ma -- ry did you
+  know.. that your ba -- by boy will 
+  one day rule the na -- tions? Did you know
 }
 
 lyricsAlto = \lyricmode {
@@ -435,7 +600,7 @@ lyricsAlto = \lyricmode {
   will one day walk on wa -- ter?
   Did you know
   has come to make you new?
-  This child that you de -- liv -- ered
+  This CHILD that you de -- liv -- ered
   will soon de -- liv -- er you
   Ma -- ry, did you know that your ba -- by boy
   will give sight to a blind man?
@@ -455,6 +620,21 @@ lyricsAlto = \lyricmode {
   The lame will leap,
   the dumb will speak,
   the prais -- es of the lamb!
+  
+  % bagian slow after fermata
+  Ma -- ry, did you know... that your ba -- by boy is
+  Lord of all cre -- a -- tion?
+  Did you know that your ba -- by boy
+  will one day rule the na -- tions?
+  Did you know
+  that your ba -- by boy is
+  hea -- ven's per -- fect lamb?
+  
+  % ending
+  This sleep -- ing CHILD you're hold -- ing is the
+  GREAT I AM!
+  THE GREAT I AM!
+  Ma -- ry did you know?
 }
 
 lyricsTenor = \lyricmode {
@@ -494,6 +674,19 @@ lyricsBass = \lyricmode {
   The lame will leap,
   the dumb will speak,
   the prais -- es of the lamb!
+  Know..
+  Know..
+  Did you know that your ba -- by boy will
+  one day rule the na -- tions?
+  Did you know
+  that your ba -- by boy is
+  hea -- ven's per -- fect lamb?
+  
+  % ending
+  This sleep -- ing CHILD you're hold -- ing is the
+  GREAT I AM!
+  THE GREAT I AM!
+  Ma -- ry did you know?
 }
 
 
@@ -635,8 +828,7 @@ headerMusicGlobal = {
 \markup {
   \left-column{
     \line { \draw-hline }
-    \line {*kalimat 'has walked where angels trod', 'trod' dapat diartikan menginjak (to step upon), }
-    \line { menggambarkan bahwa bayi Yesus telah berjalan di jalan yang telah disiapkan oleh para malaikat }
-    \line { sebelumnya. }
+    \line {*kalimat 'has walked where angels trod', 'trod' dapat diartikan menginjak (to step upon), menggambarkan }
+    \line { bahwa bayi Yesus telah berjalan di jalan yang telah disiapkan oleh para malaikat sebelumnya }
   }
 }
