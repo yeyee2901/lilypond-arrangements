@@ -4,19 +4,17 @@
 
 % ---- PAPER SETTINGS -----
 \header {
-  title = "Hymne Santo Stanislaus"
-  poet = "Lembut, mengalun"
-  composer = "Yeyee (2024)"  
+  title = "MARY, DID YOU KNOW"
+  subtitle = "(music by Mark Lowry & Buddy Greene)"
+  poet = "Reflectively (M.M. 116)"
+  composer = "Arr. Tim Hayden"  
   tagline = \markup {
     \override #'(box-padding . 1.0)
     \override #'(baseline-skip . 2.7)
     \box \center-column {
       \small {
         \line {
-          Transcribed and arranged by Yeyee
-          • \italic Free to download, with the \italic freedom to distribute,
-          modify and perform.
-          
+          Transcribed by Yeyee
         }
         \line { gabriel777sh@gmail.com } 
         \line {
@@ -47,53 +45,93 @@
 }
 
 % ----------------------------------
-% musical / articulation marks
-fermataMark = -\tweak X-offset #-0.8 -\tweak Y-offset #-0.5 ^\markup{ \magnify #2.3 \char ##x1D110 }
-accentMark = -\tweak X-offset #-0.3 -\tweak Y-offset #-1.2 ^\markup{ \magnify #1.3 \bold ">" }
-
-
-% ----------------------------------
 % CHORDS
 chordNames = \chordmode {
-  es1
+  \set Score.barNumberVisibility = #first-bar-number-invisible-save-broken-bars
+  s1
+  \set Score.currentBarNumber = 1
+  b1:m
+  fis1:m/a
+  e1:m
+  fis1:m
+  b1:m
+  fis1:m/a
+  e1:m
+  fis1
+}
+
+voiceInst = {
+  \relative d' {
+    \clef treble
+    s1
+    r4 r8[ d'8(] d8) fis,4.
+    e4. a8( a2)
+    r4 r8[ d,8(] d8) e4.
+    cis1 \break
+    r4 r8[ b'8(] b8) fis4.
+    e4. a8( a2)
+    r8[ e8] fis8 g8( g8) a4.
+    fis1
+  }
 }
 
 % VOICES
-voiceSopran = {
-  \relative es' {            
+unisonoSA = {
+  \relative d' {
     \clef treble
-    es1
+    s1 * 8 
+    r4 r4 b8 cis8 d8 e8 \break
+    fis2 r8[ b,8] fis'8 e8(
+    e4) d8 cis8( cis4) r8[ cis8]
+    b8 cis4 d8(d8) e4 d8(
+    d8) cis4. r2
+  }
+}
+
+unisonoTB = {
+  \relative d' {
+    \clef bass
+  }
+}
+
+voiceSopran = {
+  \relative d' {            
+    \clef treble
   }
 }
 
 voiceAlto = {
-  \relative es' {            
+  \relative d' {            
     \clef treble
-    es1
   }
 }
 
 voiceTenor = {
-  \relative es' {            
-    \clef treble
-    es1
+  \relative d' {            
+    \clef bass
+    
   }
 }
 
 voiceBass = {
-  \relative es' {            
-    \clef treble
-    es1
+  \relative d' {            
+    \clef bass
+    
   }
 }
 
+% ---- LYRICS ----
+lyricsUnisonoSA = \lyricmode {
+  Ma -- ry, did you know that your ba -- by boy will
+  one day walk on wa -- ter
+}
 
 
 
 %  ---- MUSICAL MARKUPS ------------
 headerMusicGlobal = {
   \time 4/4
-  \key c \major
+  \key d \major
 }
 % ----------------------------------
 
@@ -110,6 +148,36 @@ headerMusicGlobal = {
     
     \new ChordNames {
       \chordNames
+    }
+    
+    \new SolmisasiStaff \with {
+      vocalName = "Inst."
+    } {
+      \new SolmisasiVoice {
+        \solmisasiMusic{
+          \headerMusicGlobal
+          \voiceInst
+        }
+      }
+    }
+    
+    % UNISONO SA
+    \new SolmisasiStaff \with {
+      vocalName = "SA"
+      shortVocalName = "SA"
+    } {
+    <<
+      \new SolmisasiVoice = "voiceSA" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \unisonoSA
+        }
+      }
+    >>  
+    }
+    \new Lyrics \with {
+    } \lyricsto "voiceSA" {
+      \lyricsUnisonoSA
     }
     
     % SOPRAN
