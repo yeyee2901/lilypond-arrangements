@@ -1,2 +1,6 @@
 template_choir.pdf
 .DS_Store
+*.aac
+*.mp4
+*.mp3
+*.mkv
