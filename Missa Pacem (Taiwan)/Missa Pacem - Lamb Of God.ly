@@ -5,15 +5,15 @@
 % ---- PAPER SETTINGS -----
 \header {
   title = "MISSA PACEM"
-  subtitle = "Holy, Holy, Holy"
-  poet = "Allegretto (~160 BPM)"  
+  subtitle = "Lamb Of God"
+  poet = "M.M. 72 BPM"  
   composer = "Randolph Babin, Arr. Philip L. Roberts"
   tagline = \markup {
     \override #'(box-padding . 1.0)
     \override #'(baseline-skip . 2.7)
     \box \center-column {
       \small {
-        \line { \bold "MISSA PACEM - Holy, Holy, Holy" }
+        \line { \bold "MISSA PACEM - Lamb Of God" }
         \line {
           Transcribed by Yeyee          
         }
@@ -56,108 +56,144 @@ accentMark = -\tweak X-offset #-0.3 -\tweak Y-offset #-1.2 ^\markup{ \magnify #1
 
 % ----------------------------------
 headerMusicGlobal = {
-  \time 3/4
-  \key d \major
+  \time 2/2
+  \key g \major
 }
 
 % CHORDS
 chordNames = \chordmode {
   \set noChordSymbol = ""
-  s4 * 3
+  s4 * 4
   
   % intro
-  s2.
-  g2.
-  d2./fis
-  e2:m a4
-  d2.
+  e1:m
+  a1/e
+  e1:m
+  a1/e
   
-  % lagu
-  d2.
-  a2./d
-  g2./d
-  d2 d4/e
-  fis2.:m
-  b2.:m
-  c2.
-  a2.
-  d2.
-  a2./cis
-  g2./b
-  d2./a
-  g2.
-  d2./fis
-  e2:m a4
-  d2.
-  g2.
-  d2./fis
-  e2:m a4
-  d2.
+  % song
+  e1:m
+  a1/e
+  e1:m
+  a1/e
+  c1
+  d1
+  e1:m
+  a1/e
+  e1:m
+  a1/e
   
-  % blessed
-  d2.
-  e2.
-  e2./b
-  f2.:m
-  b2.:m
-  e2.
-  fis2.:sus4
-  fis2.
-  g2.
-  d2./fis
-  e2:m a4
-  d2.
-  g2.
-  d2./fis
-  e2:m a4
-  d2.
+  % song
+  e1:m
+  a1/e
+  e1:m
+  a1/e
+  c1
+  d1
+  e1:m
+  e1:m
+  
+  c1
+  d1
+  a1:m
+  e1:m
+  f1
+  f1
+  fis1:dim
+  b1
+  
+  e1:m
+  a1/e
+  e1:m
+  a1/e
+  c1
+  d1
+  e1
 }
 
 % VOICES
 voiceInst = {
   \relative d' {
-    s4 * 3
-    r4 r4 d4
-    b'2 cis4
-    d2 a4
-    g4. fis8 e4
-    d2. \break
+    \set Score.barNumberVisibility = #first-bar-number-invisible-save-broken-bars
+    s4 * 4  \break
+    \set Score.currentBarNumber = 1
+    
+    % intro
+    e4 b'4 g'2
+    e,4 cis'4 a'2
+    e,4 b'4 g'2
+    e,4 cis'4 a'2
+    \break
+    
+    % song
+    r1 * 6
+    e,4 b'4 g'2
+    e,4 cis'4 a'2
+    e,4 b'4 g'2
+    e,4 cis'4 a'2
+    
+    r1 * 6
+    e,4 b'4 g'4 fis4
+    g4 a4 b4 d4 
+    e1(
+    e1)
+    
+    s1 * 4
+    r4 a,,4 c4 g'4
+    fis2^\markup{ \italic "rit."} b,2
   }
 }
 
 voiceSATB = {
   \relative d' {
     \clef treble
-    \set Score.barNumberVisibility = #first-bar-number-invisible-save-broken-bars
-    s4 * 3  \break
-    \set Score.currentBarNumber = 1
+
     % save the space
+    s4 * 4
     
     % intro
-    r4 * 15
+    r1 * 4
     
-    d2-\tweak X-offset #5.0 \f d4
-    a'2 a4
-    d2.
-    a2. \break
-    a2.
-    a4( g4) fis4
-    e2.( 
-    e2.) \break
-    d2 d4
-    a'2 a4
-    d4. cis8 b4 \break
+    % song
+    b'2. g4
+    a2. e4
+    g4 fis4 e4 d4 \break
+    e2 e4 fis4
+    g2. a4
+    fis2 e4 d4 \break
+    e1(
+    e1)
+    r1
+    r1 \break
     
-    % potong jadi pecah suara
-    r2. * 9 
+    % song 2
+    b'2. g4
+    a2. e4
+    g4 fis4 e4 d4 \break
+    e2 e4 fis4
+    g2. a4
+    fis2 e4 d4 \break
+    e1(
+    e1)
     
-    % bar 25
-    fis4.-\tweak X-offset #5.0 \mp e8 fis4
-    gis2 fis4
-    gis4. a8 b4 \pageBreak
-    a2 a4
-    d4. d8 cis4
-    b4. a8 b4 \break
+    % song 3
+    e2. g4
+    fis2. a4 \break
+    g4 fis4 g4 a4
+    b2 g4 b4
+    c2. b4 \pageBreak
+    a2 g4 a4 
+    b1(
+    b1) \break
+    
+    b2.^\markup{\italic "a tempo"} g4
+    a2. e4
+    g4 fis4 e4 d4 \break
+    e2 e4 fis4
+    g2. r4-\tweak X-offset #-4.8 ^\markup{\italic "rit. freely"}
+    fis2 d2 
+    e1(
+    e1)
   }
 }
 
@@ -166,34 +202,7 @@ voiceSopran = {
     \clef treble
     
     % save the space
-    s4 * 3  \break
-    
-    % unisono
-    r4 * 48
-
-    % pecah suara hosanna
-    a4 d,4 d4 
-    b'2 cis4 
-    d2 a4
-    g4.( fis8 e4) \break
-    fis2 d4 
-    b'2 cis4
-    d2 a4
-    g4.( fis8 e4)
-    d2. \break
-    
-    % potong unisono 'blessed is He...'
-    r2. * 6
-    cis'2.(
-    cis4) r4 cis4
-    b2 cis4
-    d2 a4
-    g4.( fis8 e4)
-    fis2 d4 \break
-    b'2 cis4
-    d2 a4
-    g4.( fis8 e4)-\tweak X-offset #-10.0 ^\markup{ \italic "rit."} 
-    d2.
+    s4 * 4  \break
   }
 }
 
@@ -201,33 +210,9 @@ voiceAlto = {
   \relative f' {            
     \clef treble
     % save the space
-    s4 * 3  \break
+    s4 * 4  \break
     
-    r4 * 48
 
-    % pecah suara hosanna
-    a4 d,4 d4
-    d2 e4
-    d2 d4
-    d2( cis4)
-    d2 d4
-    d2 e4
-    d2 d4
-    d2( cis4)
-    d2.
-    
-    % potong unisono 'blessed is He...'
-    r2. * 6
-    cis'2.(
-    cis4) r4 e,4
-    d2 e4
-    d2 d4
-    d2( cis4)
-    d2 d4
-    d2 e4
-    d2 d4
-    d2( cis4)
-    d2.
   }
 }
 
@@ -235,33 +220,7 @@ voiceTenor = {
   \relative f' {            
     \clef treble
     % save the space
-    s4 * 3  \break
-    
-    r4 * 48
-
-    % pecah suara hosanna
-    a4 d,4 d4
-    g2 a4
-    a2 a4
-    b2( a4)
-    a2 a4
-    g2 a4
-    a2 a4
-    b2( a4)
-    fis2.
-    
-    % potong unisono 'blessed is He...'
-    r2. * 6
-    cis'2.(
-    cis4) r4 ais4
-    b2 a4
-    a2 a4
-    b2( a4)
-    a2 a4
-    g2 a4
-    a2 a4
-    b2( a4)
-    fis2.
+    s4 * 4
   }
 }
 
@@ -269,56 +228,36 @@ voiceBass = {
   \relative f' {            
     \clef treble
     % save the space
-    s4 * 3  \break
-    
-    r4 * 48
-
-    % pecah suara hosanna
-    a4 d,4 d4
-    g2 g4
-    fis2 fis4
-    e2( a4)
-    d,2 fis4
-    g2 g4
-    fis2 fis4
-    e2( a4)
-    d,2.
-    
-    % potong unisono 'blessed is He...'
-    r2. * 6
-    cis'2.(
-    cis4) r4 fis,4
-    g2 g4
-    fis2 fis4
-    e2( a4)
-    d,2 fis4
-    g2 g4
-    fis2 fis4
-    e2( a4)
-    d,2.
+    s4 * 4
   }
 }
 
 
 % ----- LYRICS ---------------------
 lyricSATB = \lyricmode {
-  Ho -- ly, Ho -- ly, Ho -- ly 
-  Lord God of hosts.
-  Heav'n and earth are full of your
+  Lamb of God,
+  You take a -- way the sins
+  of the world,
+  have mer -- cy on us
   
-  Bless -- ed is He
-  who comes in the name, 
-  who comes in the name,
-  of The
+  Lamb of God,
+  You take a -- way the sins
+  of the world,
+  have mer -- cy on us
+  
+  Lamb of God,
+  You take a -- way the sins
+  of the world,
+  have mer -- cy on us
+  
+  Lamb of God,
+  You take a -- way the sins
+  of the world,
+  grant us peace
 }
 
 lyricSopran = \lyricmode {
-  glo -- ry. 
-  Ho -- san -- na in the high -- est.
-  Ho -- san -- na in the high -- est.
-  Lord.
-  Ho -- san -- na in the high -- est.
-  Ho -- san -- na in the high -- est.
+
 }
 
 
