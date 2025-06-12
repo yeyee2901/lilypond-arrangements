@@ -38,7 +38,7 @@
   short-indent = 2.4\mm
   left-margin = 1.8\cm
   top-margin = 1\cm
-  bottom-margin = 2\cm
+  bottom-margin = 1.2\cm
   print-page-number = true
   #(define fonts
     (make-pango-font-tree "Linux Libertine O"
@@ -76,10 +76,19 @@ voiceSopran = {
     r1
     r1
     
-    % part 1
+    % part A
     \sectionLabel \markup { \box { \bold "A" } } 
     r4 bes8\f bes16 bes16 bes8 bes16 bes16 bes8 bes8 \break
-    %bes8 bes8
+    bes8 bes8 bes8 bes16 c16   d16( es16 d16 es16   f16 g16 f16 g16
+    a,16 bes16 a16 bes16   c16 d16 c16 d16   es16 d16 es16 d16   c16 d16 c16 es16 \break
+    d8. es16   d16 c16 d16 c16   bes8)\ff bes16 bes16   es8 d8 
+    c4 c4 r2 \break
+    
+    % part B
+    \tweak X-offset #6.0 \sectionLabel \markup { \box { \bold "B" } }
+    r4 c8\f c16 c16    d8 d16 d16    d8 d8
+    c8 c8 r8[ f,8] f2
+    f4. g8 a2
   }
 }
 
@@ -92,9 +101,17 @@ voiceAlto = {
     r1
     r1
     
-    % part
+    % part A
     r4 f8 f16 f16 g8 g16 g16 g8 g8
-    %f8 f8
+    f8 f8 f8 f16 f16   f8. f16   f8 f8
+    f8. c16   c8 f8    es16( f16 es16 f16   g16 a16 g16 a16
+    bes8.) bes16   bes8 bes8   bes8 bes16 bes16  a8 bes8
+    a4 a4 r2
+    
+    % part B
+    r4 a8 a16 a16  bes8 bes16 bes16  bes8 bes8
+    a8 a8 r8[ f8] f2
+    f4. g8 a2 \pageBreak
   }
 }
 
@@ -112,6 +129,15 @@ voiceTenor = {
     
     % part A
     d8 d16 d16 es8 es16 es16 es8 es8
+    d8 d8   d8 d16 d16    bes8. bes16    bes8 bes8
+    f16( g16 f16 g16    a16 bes16 a16 bes16    c8.) c16    c8 c8
+    bes16( c16 bes16 c16   d16 es16 d16 es16   f8) g16 f16   es8 f8
+    f4 f4 r2
+    
+    % part B
+    r4 f8 f16 f16   f8 f16 f16  f8 f8
+    f8 f8 r2.
+    r1
   }
 }
 
@@ -125,6 +151,15 @@ voiceBass = {
     
     % part A
     r4 bes8 bes16 bes16 g8 g16 g16 es8 es8
+    bes'8 bes8    bes8 bes16 bes16    bes,16( c16 bes16 c16   d16 es16 d16 es16
+    f8.)  f16 f8 f8   c16( d16 c16 d16    es16 f16 es16 f16
+    g16 a16 g16 a16    bes16 c16 bes16 c16    d8) es16 d16   c8 bes8
+    f4 f4 r2
+    
+    % part B
+    r4 f8 f16 f16   d8 d16 d16   bes8 bes8
+    f'8 f8 r2.
+    r1
   }
 }
 
@@ -134,6 +169,17 @@ voicePianoRight = {
   <f' bes'>4 r4 r2
   R1
   r4 <bes' d'' f''>8 <bes' d'' f''>16 <bes' d'' f''>16 <bes' es'' g''>8 <bes' es'' g''>16 <bes' es'' g''>16 <bes' es'' g''>8 <bes' es'' g''>8
+  <bes' d'' f''>8 <bes' d'' f''>8  <d' f' bes'>8 <d' f' bes'>16 c''16 <f' bes' d''>16 
+ 
+  ^[es''16 d''16 es''16] <bes' f''>16^[ g''16 <bes' f''>16 g''16]
+  <f' a'>16 <g' bes'>16 <f' a'>16 <g' bes'>16    <a' c''>16^[ <bes' d''>16 <a' c''>16 <bes' d''>16]
+  <c'' es''>16 ^[<d'' f''>16 <c'' es''>16 <d'' f''>16] g''16 ^[d''16 c''16 es''16]
+  
+  bes'16 ^[c''16 bes'16 c''16]   <d'' bes'>16 ^[<c'' es''>16 <d'' bes'>16 <c'' es''>16]    <bes' d'' f''>8 ^[g''16 f''16]  <c'' es''>8 ^[<bes' d''>8]
+  <f' a' c''>4   <f'' a'' c'''>8 <f'' a'' c'''>16 <f'' a'' c'''>16    <f'' bes'' d'''>8 <f'' bes'' d'''>16 <f'' bes'' d'''>16     <f'' bes'' d'''>8 <f'' bes'' d'''>8
+  <f'' a'' c'''>8 <f'' a'' c'''>8    <f'' a'' c'''>8 <f'' a'' c'''>16 <f'' a'' c'''>16    <f'' bes'' d'''>8 <f'' bes'' d'''>16 <f'' bes'' d'''>16     <f'' bes'' d'''>8 <f'' bes'' d'''>8
+  <f'' a'' c'''>8 <f'' a'' c'''>8 r4 r2
+  R1
 }
 
 voicePianoLeft = {
@@ -142,26 +188,59 @@ voicePianoLeft = {
   <bes, bes,,>4\f r4 r2
   R1
   r4 <bes bes,>8\f <bes bes,>16 <bes bes,>16 <g g,>8 <g g,>16 <g g,>16 <es es,>8 <es es,>8
+  
+  <bes, bes>8 <bes, bes>8 <bes, bes>8 <bes, bes>16 <bes, bes>16    
+  <bes, bes,,>16 <c c,>16 <bes, bes,,>16 <c c,>16
+  <d, d>16 <es es,>16 <d, d>16 <es es,>16
+  <f, f>8. <f, f>16  <f, f>8 <f, f>8
+  <c, c>16 <d, d>16 <c, c>16 <d, d>16 <es, es>16 <f, f>16 <es, es>16 <f, f>16
+  <g, g>16 <a, a>16 <g, g>16 <a, a>16    <bes, bes>16 <c c'>16 <bes, bes>16 <c c'>16    <d d'>8\ff <es es'>16 <d d'>16    <c c'>8 <bes, bes>8
+  <f, f>8 <f, f>8\f    <f, f>8 <f, f>16 <f, f>16     <d, d>8 <d, d>16 <d, d>16    <bes,, bes,>8 <bes,, bes,>8
+  <f, f>8 <f, f>8    <f, f>8 <f, f>16 <f, f>16     <d, d>8 <d, d>16 <d, d>16    <bes,, bes,>8 <bes,, bes,>8
+  <f, f>8 <f, f>8 r4 r2
+  R1
 }
 
 
 % ----- LYRICS ---------------------
 lyricSopran = \lyricmode {
   Great was the com -- pa -- ny of the
+  preach -- ers,
+  Great was the com -- pa -- ny of the preach -- ers;
+  
+  Great was the com -- pa -- ny of the preach -- ers.
+  The Lord gave the word:
 }
 
 lyricAlto = \lyricmode {
   Great was the com -- pa -- ny of the
+  preach -- ers,
+  Great was the com -- pa -- ny, the com -- pa -- ny, the com -- pa -- ny,
+  the com -- pa -- ny of the preach -- ers;
+  
+  Great was the com -- pa -- ny of the preach -- ers.
+  The Lord gave the word:
 }
 
 lyricTenor = \lyricmode {
   The Lord gave the word:
   Great was the com -- pa -- ny of the
+  preach -- ers,
+  Great was the com -- pa -- ny,
+  the com -- pa -- ny,
+  the com -- pa -- ny of the preach -- ers;
+  
+  Great was the com -- pa -- ny of the preach -- ers.
 }
 
 lyricBass = \lyricmode {
   The Lord gave the word:
   Great was the com -- pa -- ny of the
+  preach -- ers,
+  Great was the com -- pa -- ny,
+  the com -- pa -- ny of the prech -- ers;
+  
+  Great was the com -- pa -- ny of the preach -- ers.
 }
 
 
@@ -278,7 +357,7 @@ lyricBass = \lyricmode {
   \context {
     \Score
     \override StaffGrouper.staff-staff-spacing = 
-      #'((basic-distance . 5)
+      #'((basic-distance . 11)
           (minimum-distance . 1)
           (padding . 1)
           (stretchability . 5))
@@ -295,5 +374,12 @@ lyricBass = \lyricmode {
 \markup {
   \left-column{
     \line { \draw-hline }
+    \line { "*The 1/16 slurred notes, especially the 'com' (from 'company') are to be sung" }
+    \line { "with a staccato." }
+    \line { "*Do not voice the 'm' from the word 'company', unless you are reaching the" }
+    \line { "end of the slur phrasing."}
+    \line { "*example:"  \bold \italic "'co - ho - ho - ho - hom - pa - ny'"}
+    \line { "*Common interpretations also voice " \bold "'Great', 'com', 'hom' and 'preach'"}
+    \line { "louder to create stronger accent."}
   }
 }
