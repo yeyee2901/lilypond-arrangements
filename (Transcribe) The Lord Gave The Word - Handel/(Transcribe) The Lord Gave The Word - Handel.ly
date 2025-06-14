@@ -33,9 +33,8 @@
         \small {
           \line { \bold "The Lord Gave The Word - G.F. Handel" }
           \line {
-            Transcribed by Yeyee          
+            Transcribed by Yeyee (gabriel777sh@gmail.com)       
           }
-          \line { gabriel777sh@gmail.com } 
           \line {
             Typeset using 
             \with-url "http://www.lilyPond.org"
@@ -127,7 +126,7 @@ voiceSopran = {
     
     \once \override
             Score.NonMusicalPaperColumn
-                 .line-break-system-details = #'((Y-offset . 63))
+                 .line-break-system-details = #'((Y-offset . 56.8))
     \break
     d8. es16    d16 c16 d16 c16  bes8\ff)  bes16 bes16  es8 d8
     c4 c4  bes8 bes8 a4 
@@ -280,8 +279,24 @@ voicePianoRight = {
   <bes' d''>16 <c'' es''>16 <bes' d''>16 <c'' es''>16    <d'' f''>16 <es'' g''>16 <d'' f''>16 <es'' g''>16
   f''16 es''16 g''16 a''16   <d'' bes''>16 f''16 g''16 a''16 
   <d'' bes''>16 es''16 d''16 es''16    <d'' f''>16 f''16 g''16 a''16
-  bes''8. 
+  <d'' bes''>8. <d'' f''>16   <d'' f''>8 <d'' f''>8   
+  bes'16 c''16 bes'16 c''16  	d''16 es''16 d''16 es''16
+  <d'' f''>16 es''16 g''16 a''16	<d'' bes''>16 f''16 g''16 a''16
+  <d'' bes''>16 es''16 d''16 es''16	<d' f'>8 bes16 c'16
+  <bes d'>16 <c' es'>16 <bes d'>16 <c' es'>16	<d' f'>16 <es' g'>16 <d' f'>16 <es' g'>16
+  <f' d''>16 es''16 <f' d''>16 es''16	<bes' f''>16 g''16 <bes' f''>16 g''16
+  <f' a'>16 <g' bes'>16 <f' a'>16 <g' bes'>16	<a' c''>16 <bes' d''>16 <a' c''>16 <bes' d''>16
+  <c'' es''>16 <d'' f''>16 <c'' es''>16 <d'' f''>16	<g' c''>16 d''16 <g' c''>16 es''16
+  <bes' d''>16 ^[c''16 <bes' d''>16 c''16]		<bes' d''>16 ^[es''16 <bes' d''>16 es''16]
+  <bes' f''>8 ^[<bes' g''>16 f''16] <c'' es''>8 <bes' d''>8
+  <f' a' c''>4 <a' c'' es''>16 d''16 es''16 c''16
+  <bes' d''>8 <bes' es'' g''>8 <c'' f'' a''>4
   
+  % outro
+  <d'' bes''>16 es''16 d''16 es''16	f''16 es''16 g''16 a''16
+  <d'' bes''>16 es''16 d''16 es''16	f''16 f''16 g''16 a''16
+  <d'' bes''>8 <d'' f''>8 <bes' d'' f''>4( <bes' d'' f''>8) <c'' es''>16 <bes' d''>16 <bes' c''>8\startTrillSpan <f' a'>8\stopTrillSpan
+  <d' f' bes'>4 r4 r2 \bar ".|"
 }
 
 voicePianoLeft = {
@@ -313,6 +328,31 @@ voicePianoLeft = {
   <f, f>4 r4 <bes, f bes>4 <bes, bes>8 <bes, bes>8
   <bes, bes>8. <bes,, bes,>16 <bes,, bes,>8 <bes,, bes,>8
   <bes,, bes,>16 <c, c>16 <bes,, bes,>16 <c, c>16 <bes,, bes,>16 <c, c>16 <bes,, bes,>16 <c, c>16
+  <bes,, bes,>8 ^[<bes,, bes,>8] <bes,, bes,>8 ^[<bes,, bes,>8]
+  <bes, bes>8. <bes, bes>16 <bes, bes>8 <bes, bes>8
+  <bes,, bes,>8 ^[<bes,, bes,>8] <bes,, bes,>8 ^[<bes,, bes,>8]
+  <bes,, bes,>8 ^[<bes,, bes,>8] <bes,, bes,>8 ^[<bes,, bes,>8]
+  <bes,, bes,>8 ^[<bes,, bes,>8] <bes,, bes,>8 ^[<bes,, bes,>8]
+  <bes,, bes,>16 <c, c>16 <bes,, bes,>16 <c, c>16	<d, d>16 <es, es>16 <d, d>16 <es, es>16
+  <f, f>8. <f, f>16 <f, f>8 <f, f>8
+  <c, c>16 <d, d>16 <c, c>16 <d, d>16	<es, es>16 <f, f>16 <es, es>16 <f, f>16
+  <g, g>16 <a, a>16 <g, g>16 <a, a>16	<bes, bes>16 <c c'>16 <bes, bes>16 <c c'>16
+  <d d'>8\ff <es es'>16 <d d'>16 <c c'>8 <bes, bes>8
+  <f, f>8 <f, f>16 <f, f>16	<f, f>4
+  <bes, bes>8 <es, es>8 <f, f>4
+  
+  % outro
+  <bes,, bes,>8 ^[<bes,, bes,>8] <bes,, bes,>8 ^[<bes,, bes,>8]
+  <bes,, bes,>8 ^[<bes,, bes,>8] <bes,, bes,>8 ^[<bes,, bes,>8] 
+  
+  \once \override
+          Score.NonMusicalPaperColumn
+               .line-break-system-details = #'((Y-offset . 118))
+  \break
+  <bes,, bes,>16 <c, c>16 <bes,, bes,>16 <c, c>16	<d, d>16 <es, es>16 <d, d>16 <es, es>16
+  <f, f>8 <f, f>8 <f, f>8 <f, f>8
+  <bes,, bes,>4 r4 r2 \bar "|."
+  
 }
 
 
@@ -528,12 +568,8 @@ lyricBass = \lyricmode {
 \markup {
   \left-column{
     \line { \draw-hline }
-    \line { "*The 1/16 slurred notes, especially the 'com' (from 'company') are to be sung" }
-    \line { "with a staccato." }
-    \line { "*Do not voice the 'm' from the word 'company', unless you are reaching the" }
-    \line { "end of the slur phrasing."}
+    \line { "*The 1/16 slurred notes, especially the 'com' (from 'company') are to be sung with a staccato" }
     \line { "*example:"  \bold \italic "'co - ho - ho - ho - hom - pa - ny'"}
-    \line { "*Common interpretations also voice " \bold "'Great', 'com', 'hom' and 'preach'"}
-    \line { "louder to create stronger accent."}
+    \line { "*Common interpretations also voice " \bold "'Great', 'com'                                          and 'preach'" "louder to create stronger accent"}
   }
 }
