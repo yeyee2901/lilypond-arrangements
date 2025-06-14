@@ -16,7 +16,7 @@
   short-indent = 2.4\mm
   left-margin = 1.8\cm
   top-margin = 1\cm
-  bottom-margin = 2.0\cm
+  bottom-margin = 0.5\cm
   print-page-number = false
   #(define fonts
     (make-pango-font-tree "Linux Libertine O"
@@ -86,7 +86,11 @@ voiceSopran = {
     bes8 bes8 bes8 bes16 c16   d16( es16 d16 es16   f16 g16 f16 g16
     a,16 bes16 a16 bes16   c16 d16 c16 d16   es16 d16 es16 d16   c16 d16 c16 es16 \break
     d8. es16   d16 c16 d16 c16   bes8)\ff bes16 bes16   es8 d8 
-    c4 c4 r2 \break
+    c4 c4 r2 
+    \once \override
+    Score.NonMusicalPaperColumn
+         .line-break-system-details = #'((Y-offset . 65))
+    \break
     
     % part B
     \tweak X-offset #6.0 \sectionLabel \markup { \box { \bold "B" } }
@@ -97,19 +101,34 @@ voiceSopran = {
     c4\f c8 c8    f,16( g16 f16 g16    a16 bes16 a16 bes16   c8.) a16   a8 a8
     
      
-    a16 ( bes16 a16 bes16    c16 c16 d16 e16 \break
+    
+    a16 ( bes16 a16 bes16    c16 c16 d16 e16 
+    
+    \once \override
+            Score.NonMusicalPaperColumn
+                 .line-break-system-details = #'((Y-offset . 65))
+    \break
     f8. )  c16 c8 c8   
     
     a16( bes16 a16 bes16   c16 d16 c16 d16   e8.) d16  c4  a8 d8 c4 \pageBreak
     
     \tweak X-offset #6.0 \sectionLabel \markup { \box { \bold "C" } } 
     c4 r4 d4 d8 bes8
-    f8 f16 f16 f8 g16( a16) bes8 f8 r4 \break
+    f8 f16 f16 f8 g16( a16) bes8 f8 r4 
+    \once \override
+            Score.NonMusicalPaperColumn
+                 .line-break-system-details = #'((Y-offset . 65))
+    \break
     f'4 f8 f8   f,8 g16 a16   bes8 f8
     f'8 f8 bes,8 f'8 f8 bes,8 r4 \break
     f'4 f8 f8  d16( es16 d16 es16    f16 g16 f16 g16
     a,16 bes16 a16 bes16    c16 d16 c16 d16
-    es16 d16 es16 d16    c16 d16 c16 es16 \break
+    es16 d16 es16 d16    c16 d16 c16 es16 
+    
+    \once \override
+            Score.NonMusicalPaperColumn
+                 .line-break-system-details = #'((Y-offset . 63))
+    \break
     d8. es16    d16 c16 d16 c16  bes8\ff)  bes16 bes16  es8 d8
     c4 c4  bes8 bes8 a4 
     bes4 r4 r2 \break
@@ -260,7 +279,8 @@ voicePianoRight = {
   <c'' f'' a''>8 c''16 d''16 es''16 d''16 es''16 c''16   
   <bes' d''>16 <c'' es''>16 <bes' d''>16 <c'' es''>16    <d'' f''>16 <es'' g''>16 <d'' f''>16 <es'' g''>16
   f''16 es''16 g''16 a''16   <d'' bes''>16 f''16 g''16 a''16 
-  <d'' bes''>16 es''16 d''16 es''16    <d'' f''>16 f''16 g''16 a''16 
+  <d'' bes''>16 es''16 d''16 es''16    <d'' f''>16 f''16 g''16 a''16
+  bes''8. 
   
 }
 
