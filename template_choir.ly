@@ -163,7 +163,22 @@ voiceBass = {
   }
 }
 
+%  ---- LYRICS ---------------------
+lyricSopran = \lyricmode {
+  名前
+}
 
+lyricAlto = \lyricmode { 
+  名前
+}
+
+lyricTenor = \lyricmode {
+  名前
+}
+
+lyricBass = \lyricmode {
+  名前
+}
 
 
 %  ---- MUSICAL MARKUPS ------------
@@ -204,7 +219,7 @@ headerMusicGlobal = {
     }
     \new Lyrics \with {
     } \lyricsto "voiceSopran" {
-      u
+      \lyricSopran
     }
     
     
@@ -225,7 +240,7 @@ headerMusicGlobal = {
     }
     \new Lyrics \with {
     } \lyricsto "voiceAlto" {
-      u
+      \lyricAlto
     }
     
     
@@ -245,7 +260,7 @@ headerMusicGlobal = {
     }
     \new Lyrics \with {
     } \lyricsto "voiceTenor" {
-      u
+      \lyricTenor
     }
     
     
@@ -266,7 +281,7 @@ headerMusicGlobal = {
     }
     \new Lyrics \with {
     } \lyricsto "voiceBass" {
-      u
+      \lyricBass
     }
   >> 
   }
