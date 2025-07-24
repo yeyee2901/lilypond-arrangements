@@ -4,8 +4,8 @@
 
 % ---- PAPER SETTINGS -----
 \header {
-  title = "Hymne Santo Stanislaus"
-  poet = "Lembut, mengalun"
+  title = "Template"
+  poet = "Poet"
   composer = "Yeyee (2024)"  
   tagline = \markup {
     \override #'(box-padding . 1.0)
@@ -46,6 +46,74 @@
                           (/ staff-height pt 22)))
 }
 
+
+%{
+
+% Version 2 Template Header & Footer
+% Uses manual vertical spacing with this command:
+%
+%\once \override
+%  Score.NonMusicalPaperColumn
+%  .line-break-system-details = #'((Y-offset . 65))
+%\break
+%
+% 65 is the offset value. Sweet spot is 60-65.
+
+\header {
+  title = "Title"
+  subtitle = "Handel's Messiah"
+  subsubtitle = "(With Simplified Piano Accompaniment)"
+  composer = "G.F. Handel"
+  poet = "Andante allegro (M.M. 80)"
+}
+
+%}
+
+%{
+
+\paper {
+  indent = 2.4\mm
+  short-indent = 2.4\mm
+  left-margin = 1.8\cm
+  top-margin = 1\cm
+  bottom-margin = 0.5\cm
+  print-page-number = false
+  #(define fonts
+    (make-pango-font-tree "Linux Libertine O"
+                          "Nimbus Sans, Nimbus Sans L"
+                          "DejaVu Sans Mono"
+                          (/ staff-height pt 22)))
+
+  oddFooterMarkup = \markup {
+    \hspace {23\mm}
+    \override #'(box-padding . 1.0)
+    \override #'(baseline-skip . 2.7)
+    \left-align {
+      \box \center-column {
+        \small {
+          \line { \bold "The Lord Gave The Word - G.F. Handel" }
+          \line {
+            Transcribed by Yeyee (gabriel777sh@gmail.com)       
+          }
+          \line {
+            Typeset using 
+            \with-url "http://www.lilyPond.org"
+            \concat { \bold { \tiny www. LilyPond \tiny .org } } 
+            and 
+            \with-url "https://henriyulianto.github.io/solmisasi-lily"
+            \italic \bold solmisasi-lily
+          }
+          \line { rev 1.0 }
+        }
+      }
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
+}
+
+%}
+
+
 % ----------------------------------
 % musical / articulation marks
 fermataMark = -\tweak X-offset #-0.8 -\tweak Y-offset #-0.5 ^\markup{ \magnify #2.3 \char ##x1D110 }
@@ -62,6 +130,11 @@ chordNames = \chordmode {
 voiceSopran = {
   \relative es' {            
     \clef treble
+    % save the spaces
+    \set Score.barNumberVisibility = #first-bar-number-invisible-save-broken-bars
+    s1  \break
+    \set Score.currentBarNumber = 1
+    
     es1
   }
 }
@@ -69,6 +142,7 @@ voiceSopran = {
 voiceAlto = {
   \relative es' {            
     \clef treble
+    s1 \break
     es1
   }
 }
@@ -76,6 +150,7 @@ voiceAlto = {
 voiceTenor = {
   \relative es' {            
     \clef treble
+    s1 \break
     es1
   }
 }
@@ -83,6 +158,7 @@ voiceTenor = {
 voiceBass = {
   \relative es' {            
     \clef treble
+    s1 \break
     es1
   }
 }
@@ -212,7 +288,7 @@ headerMusicGlobal = {
 \markup {
   \left-column{
     \line { \draw-hline }
-    \line { *Hymne Santo Stanislaus Kostka (5 November 2024)}
-    \line { *Perayaan pesta nama Santo Stanislaus Kostka dirayakan setiap tanggal 13 November }
+    \line { *Some notes here }
+    \line { *some other notes }
   }
 }
