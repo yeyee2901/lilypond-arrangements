@@ -1,0 +1,332 @@
+\version "2.20.0"
+\include "solmisasi.ily"
+#(set-default-paper-size "a4")
+
+% ---- PAPER SETTINGS -----
+\header {
+  title = "Kristus Raja Peziarah Pengharapan"
+  subtitle = "(HUT Kristus Raja 95th)"
+  poet = ""
+  composer = "Yeyee (2025)"  
+  tagline = \markup {
+    \override #'(box-padding . 1.0)
+    \override #'(baseline-skip . 2.7)
+    \box \center-column {
+      \small {
+        \line {
+          Transcribed and arranged by Yeyee
+          • \italic Free to download, with the \italic freedom to distribute,
+          modify and perform.
+          
+        }
+        \line { gabriel777sh@gmail.com } 
+        \line {
+          Typeset using 
+          \with-url "http://www.lilyPond.org"
+          \concat { \bold { \tiny www. LilyPond \tiny .org } } 
+          and 
+          \with-url "https://henriyulianto.github.io/solmisasi-lily"
+          \italic \bold solmisasi-lily
+        }
+        \line { rev 1.0 }
+      }
+    }
+  }
+}
+
+\paper {
+  indent = 2.4\mm
+  short-indent = 2.4\mm
+  left-margin = 1.3\cm
+  top-margin = 0.5\cm
+  print-page-number = false
+  #(define fonts
+    (make-pango-font-tree "Linux Libertine O"
+                          "Nimbus Sans, Nimbus Sans L"
+                          "DejaVu Sans Mono"
+                          (/ staff-height pt 22)))
+}
+
+
+
+% ----------------------------------
+% musical / articulation marks
+fermataMark = -\tweak X-offset #-0.8 -\tweak Y-offset #-0.5 ^\markup{ \magnify #2.3 \char ##x1D110 }
+accentMark = -\tweak X-offset #-0.3 -\tweak Y-offset #-1.2 ^\markup{ \magnify #1.3 \bold ">" }
+
+
+% ----------------------------------
+% CHORDS
+chordNames = \chordmode {
+  \set noChordSymbol=""
+  s1
+  r1
+
+  bes1
+  c1
+  a1:m
+  d1:m
+  g1:m
+  c1
+  bes2 bes2:m
+  f1
+}
+
+% VOICES
+voiceInst = {
+  \relative es' {
+    \clef treble
+    s1 * 2
+    
+    % reff
+    s1 * 8
+    \time 2/4 d8 e8 f8 g8( g8)
+    g8 a8 bes8(
+    bes8) a8 bes8 c8 
+    \time 4/4 c2. r4
+  }
+}
+
+voiceSopran = {
+  \relative es' {            
+    \clef treble
+    % save the spaces
+    \set Score.barNumberVisibility = #first-bar-number-invisible-save-broken-bars
+    s1 r4 r4 \break
+    \set Score.currentBarNumber = 1
+    
+    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Reff A" } } 
+    g8 a8 g8 f8 
+    d4 a'4 g8 f8 g8 g8(
+    g4.) c,8 g'8 a8 g8 f8
+    c'8 a8 a4 g8 f8 a8 f8(
+    f4.) f8 f8 e8 d8 c8 \break
+    d4 f8 f8 d8 d8 a'8 g8(
+    g4.) c,8 g'8 a8 g8 f8
+    g4 f8 g4 a4 f8(
+    f2.) 
+    r4 \break
+    
+  }
+}
+
+voiceAlto = {
+  \relative es' {            
+    \clef treble
+    s1 r4 r4 \break
+    
+    g8 a8 g8 f8
+    d4 d4 f8 f8 f8 e8(
+    e4.) c8 e8 f8 e8 d8
+    g8 e8 e4 e8 d8 c8 d8(
+    d4.) d8 d8 d8 d8 c8
+    bes4 bes8 c8 d8 d8 d8 c8(
+    c4.) c8 d8 d8 c8 bes8
+    d4 d8 d4 cis4 c8(
+    c2.) r4
+  }
+}
+
+voiceTenor = {
+  \relative es' {            
+    \clef treble
+    s1 r4 r4
+    r4 r4
+    
+    bes'2 bes4 a4
+    g2. r8[ c8]
+    c8 c4 a4 a8 c8 bes8
+    a8 a8( a2) r4
+    \tuplet 3/3 {bes bes bes}  d4
+    \tuplet 3/3 {c d e} r4
+    d8 d4 d4 cis8 cis8 c8(
+    c8) c8 d8 f4. r4
+  }
+}
+
+voiceBass = {
+  \relative es' {            
+    \clef treble
+    s1 r4 r4
+    r4 r4
+    bes2 bes4 bes4
+    c2. r8[ c8]
+    c8 c4 c4 a8 f'8 e8
+    d8 d8( d2) r4
+    \tuplet 3/3 {g g g}  f4
+    \tuplet 3/3 {e d c} r4
+    bes8 bes4 bes4 bes8 bes8 f'8(
+    f8) f8 g8 a4. r4
+  }
+}
+
+%  ---- LYRICS ---------------------
+lyricSopran = \lyricmode {
+}
+
+lyricAlto = \lyricmode {
+  \tweak X-offset #0.4 Kris -- tus Ra -- ja pe -- zia -- rah ha -- ra -- pan
+  Sem -- bi -- lan pu -- luh li -- ma ta -- hun ber -- kar -- ya
+  Ter -- u -- kir ke -- nang -- an dan ra -- gam ce -- ri -- ta
+  Ba -- nyak cin -- ta dan ka -- sih ter -- cu -- rah
+}
+
+lyricTenor = \lyricmode {
+}
+
+lyricBass = \lyricmode {
+  Kris -- tus Ra -- ja
+  Sem -- bi -- lan pu -- luh li -- ma ta -- hun
+  Ke -- na -- ngan dan ce -- ri -- ta
+  Ba -- nyak cin -- ta ka -- sih ter -- cu -- rah
+}
+
+
+
+%  ---- MUSICAL MARKUPS ------------
+headerMusicGlobal = {
+  \time 4/4
+  \key f \major
+}
+% ----------------------------------
+
+% SCORE ---------------------------
+
+\score {
+<<  
+  \new SolmisasiTimeAndKeySignature {
+    \solmisasiMusic \headerMusicGlobal
+  }
+  
+  \new ChoirStaff {
+  << 
+
+    \new ChordNames {
+      \chordNames
+    }
+
+    % instrument
+    \new SolmisasiStaff \with {
+      vocalName = "Inst."
+      shortVocalName = "Inst."
+    } {
+      \new SolmisasiVoice = "voiceInst" {
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \voiceInst        
+        }
+      }
+    }
+
+    
+    % SOPRAN
+    \new SolmisasiStaff \with {
+      vocalName = "S"
+      shortVocalName = "S"
+    } {
+    <<
+      \new SolmisasiVoice = "voiceSopran" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \voiceSopran
+        }
+      }
+    >>  
+    }
+    \new Lyrics \with {
+    } \lyricsto "voiceSopran" {
+      \lyricSopran
+    }
+    
+    
+    
+    % ALTO
+    \new SolmisasiStaff \with {
+      vocalName = "A"
+      shortVocalName = "A"
+    } {
+    <<
+      \new SolmisasiVoice = "voiceAlto" {
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \voiceAlto
+        }
+      }
+    >>  
+    }
+    \new Lyrics \with {
+    } \lyricsto "voiceAlto" {
+      \lyricAlto
+    }
+    
+    
+    % TENOR
+    \new SolmisasiStaff \with {
+      vocalName = "T"
+      shortVocalName = "T"
+    } {
+    <<
+      \new SolmisasiVoice = "voiceTenor" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \voiceTenor
+        }
+      }
+    >>  
+    }
+    \new Lyrics \with {
+    } \lyricsto "voiceTenor" {
+      \lyricTenor
+    }
+    
+    
+    
+    % BASS
+    \new SolmisasiStaff \with {
+      vocalName = "B"
+      shortVocalName = "B"
+    } {
+    <<
+      \new SolmisasiVoice = "voiceBass" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \voiceBass
+        }
+      }
+    >>  
+    }
+    \new Lyrics \with {
+    } \lyricsto "voiceBass" {
+      \lyricBass
+    }
+  >> 
+  }
+>>
+}
+
+% atur spacing antar stave suara
+\layout {
+  \context {
+    \Score
+    \override StaffGrouper.staff-staff-spacing = 
+      #'((basic-distance . 5)
+          (minimum-distance . 1)
+          (padding . 1)
+          (stretchability . 5))
+  }
+  
+  \context {
+      \SolmisasiStaff
+      \revert TimeSignature.stencil
+      % \override TimeSignature.font-size = #-1
+      \override TimeSignature.break-visibility = #end-of-line-invisible
+  }
+}
+
+\markup {
+  \left-column{
+    \line { \draw-hline }
+    \line { *Some notes here }
+    \line { *some other notes }
+  }
+}
