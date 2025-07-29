@@ -7,7 +7,7 @@
   title = "Kristus Raja Peziarah Pengharapan"
   subtitle = "(HUT Kristus Raja 95th)"
   poet = ""
-  composer = "Yeyee (2025)"  
+  composer = "Tata Suara: Yeyee (2025)"  
   tagline = \markup {
     \override #'(box-padding . 1.0)
     \override #'(baseline-skip . 2.7)
@@ -80,10 +80,12 @@ voiceInst = {
     
     % reff
     s1 * 8
-    \time 2/4 d8 e8 f8 g8( g8)
-    g8 a8 bes8(
+    \time 2/4 
+    d8 e8 f8 g8( 
+    g8)g8 a8 bes8(
     bes8) a8 bes8 c8 
-    \time 4/4 c2. r4
+    \time 4/4 
+    c2 r4 r4
   }
 }
 
@@ -107,6 +109,25 @@ voiceSopran = {
     f2.) 
     r4 \break
     
+    % instrument
+    % 2/4
+    r2
+    r2
+    r2
+    % 4/4
+    
+    % verse 1
+    r4 f8\mf f8 f8 e8 d8 c8 \break 
+    d4 a'2 r4
+    r4 f8 f8 f8 e8 d8 c8
+    c4 a2.
+    r4 f'8 f8 f8 e8 d8 c8 \pageBreak
+    d4 a'8 g2 c,8 
+    a'8 a8 g8 f8 g4 a8 g8(
+    g2.) r4 
+    \sectionLabel \markup { \bold \box { "1 = G" } }
+    \key g \major
+    
   }
 }
 
@@ -124,6 +145,26 @@ voiceAlto = {
     c4.) c8 d8 d8 c8 bes8
     d4 d8 d4 cis4 c8(
     c2.) r4
+    
+    % interlude
+    % 2/4
+    s2
+    s2
+    s2
+    % 4/4
+    s1
+    
+    % verse 1
+    d4\p( e8 f8 g4 a4
+    f2.) r4
+    r8[ c8(] d8 f4 g8 a8 g8
+    f2.) r4
+    d4. c4. r4
+    f4 f8 g4 g8 f8 e8(
+    e2.) r4
+    
+    % verse 2
+    \key g \major
   }
 }
 
@@ -141,6 +182,27 @@ voiceTenor = {
     \tuplet 3/3 {c d e} r4
     d8 d4 d4 cis8 cis8 c8(
     c8) c8 d8 f4. r4
+    
+    % interlude
+    % 2/4
+    s2
+    s2
+    s2
+    % 4/4
+    s1
+    
+    % verse 1
+    f,2( g4 a4
+    bes2.) r4
+    r8[ a8(] bes8 c4 bes8 c8 bes8
+    a2.) r4
+    g4. a4. r4
+    bes4 bes8 b4 b8 b8 c8(
+    c2.) r4
+    
+    % verse 2
+    \key g \major
+    
   }
 }
 
@@ -157,11 +219,39 @@ voiceBass = {
     \tuplet 3/3 {e d c} r4
     bes8 bes4 bes4 bes8 bes8 f'8(
     f8) f8 g8 a4. r4
+    
+    % interlude
+    % 2/4
+    s2
+    s2
+    s2
+    % 4/4
+    s1
+    
+    % verse 1
+    f2( d2
+    bes2.) r4
+    r8[ f'8(] g8 a4 g8 f8 e8
+    f2.) r4
+    d4. e4. r4
+    f4 f8 d4 d8 d8 c8(
+    c2.) r4
+    
+    % verse 2
+    \key g \major
   }
 }
 
 %  ---- LYRICS ---------------------
 lyricSopran = \lyricmode {
+  _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _
+  Di si -- ni 'ku di -- be -- sar -- kan
+  de -- ngan cin -- ta yang sem -- pur -- na
+  Di si -- ni 'ku te -- mu -- kan te -- rang
+  a -- ba -- di tak per -- nah pu -- dar
 }
 
 lyricAlto = \lyricmode {
@@ -179,6 +269,12 @@ lyricBass = \lyricmode {
   Sem -- bi -- lan pu -- luh li -- ma ta -- hun
   Ke -- na -- ngan dan ce -- ri -- ta
   Ba -- nyak cin -- ta ka -- sih ter -- cu -- rah
+  
+  % verse 1
+  Huuuu...
+  Huuuu...
+  te -- rang
+  a -- ba -- di tak pu -- dar
 }
 
 
