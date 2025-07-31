@@ -103,8 +103,8 @@ voiceSopran = {
     g2)  \break
     
     % reff
-    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Reff A" } } 
-    g8 a8 g8 f8 
+    \tweak X-offset #1.5 \sectionLabel \markup { \box { \bold "Reff A" } } 
+    g8 a8 g8 f8\f 
     d4 a'4 g8 f8 g8 g8(
     g4.) c,8 g'8 a8 g8 f8
     c'8 a8 a4 g8 f8 a8 f8(
@@ -115,6 +115,17 @@ voiceSopran = {
     f2.)^\markup{"musik -> bait 2"}   
     r4\break
     
+    % bait 2
+    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Bait 2" } } 
+    r4 r4 f8 e8\mf d8 c8
+    d4 a'2.
+    r4 f8 f8 f8 e8 d8 c8
+    d4 c2. \break
+    r4 r8[ c8] c8 d8 c8 f8(
+    f8) d4 c8 c8 d8 a'8 g8(
+    g2) f8 g8 f8 a8( \break
+    a8) g8 f8 g4 f8 f8 bes8(
+    bes8) a8 g4^\markup{"-> reff A -> interlude"} \breathe s4 s4 \bar "" \break
   }
 }
 
@@ -144,6 +155,18 @@ voiceAlto = {
     c4.) c8 d8 d8 c8 bes8
     d4 d8 d4 cis4 c8(
     c2.) r4
+        
+    % bait 2    
+    r1
+    d4\p( e8 f8 g4 a4
+    f2.) r4
+    r8[ c8(] d8 f4 g8 a8 g8
+    f2.) r4
+    f1(
+    g2) \breathe f8 g8 f8 a8(
+    a8) g8 f8 g4 f8 f8 f8(
+    f8) f8 e4
+    \breathe s4 s4 \bar ""
   }
 }
 
@@ -163,8 +186,8 @@ voiceTenor = {
     bes4 bes8 b4 b8 b8 c8(
     c2) r4 r4
     
-    % ref
-    bes'2 bes4 a4
+    % reff A
+    bes'2\f bes4 a4
     g2. r8[ c8]
     c8 c4 a4 a8 c8 bes8
     a8 a8( a2) r4
@@ -172,6 +195,18 @@ voiceTenor = {
     \tuplet 3/3 {c d e} r4
     d8 d4 d4 cis8 cis8 c8(
     c8) c8 d8 f4. r4
+    
+    % bait 2
+    r1
+    f,2( g4 a4
+    bes2.) r4
+    r8[ a8(] bes8 c4 bes8 c8 bes8
+    a2.) r4
+    a2( c2
+    d2) \breathe c8 c8 c8 c8(
+    c8) c8 c8 c4 d8 d8 d8(
+    d8) d8 c4
+    \breathe s4 s4 \bar ""
   }
 }
 
@@ -199,6 +234,18 @@ voiceBass = {
     \tuplet 3/3 {e d c} r4
     bes8 bes4 bes4 bes8 bes8 f'8(
     f8) f8 g8 a4. r4
+    
+    % bait 2
+    r1
+    f2( d2
+    bes2.) r4
+    r8[ f'8(] g8 a4 g8 f8 e8
+    f2.) r4
+    d2( c2
+    bes2) \breathe d8 d8 d8 d8(
+    d8) d8 f8 f4 f8 f8 f8(
+    f8) d8 c4
+    \breathe s4 s4 \bar ""
   }
 }
 
@@ -209,7 +256,20 @@ lyricSopran = \lyricmode {
   de -- ngan cin -- ta yang sem -- pur -- na
   Di si -- ni 'ku te -- mu -- kan te -- rang
   a -- ba -- di tak per -- nah pu -- dar
-
+  
+  % reff 
+  _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _
+  
+  A -- ku de -- ngar sua -- ra
+  Pang -- gi -- lan ka -- sih me -- nya -- pa
+  Me -- ne -- gas -- kan de -- tak 
+  lang -- kah yang nya -- ta
+  A -- khir -- nya ku -- te  -- mu -- kan 
+  a -- rah tu -- ju -- an
 }
 
 lyricAlto = \lyricmode {
