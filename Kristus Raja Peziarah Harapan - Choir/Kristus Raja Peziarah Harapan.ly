@@ -130,20 +130,29 @@ voiceSopran = {
     
     % bridge
     \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Bridge" } } 
-    r4 r4 c4 bes8 a8
+    r4 r4 c4 bes8\mf a8
     g4 f4 a8 g8 f8 a8 
     g4 f2 c8 d8
     f8 d8 c8 d8 e8 f8 a8 f8( \break
     f4.) f8 c'8 bes8 a8 f8(
     f8) f8 f8 f4 d4 c8
     bes'4 a8 g4 f8( g8) g8(
-    g2)( g8) fis8 g8 a8 \break
+    g2)\<( g8) fis8 g8 a8\! \break
     
     % reff A 1 = G
     \key g \major
-    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Reff A (1 = G)" } }
-    a2 \breathe a8 b8 a8 g8
-    e4 b'4
+    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Reff End (1 = G)" } }
+    a2 \breathe a8 b8 a8 g8 
+    e4 b'4 a8 g8 a8 a8(
+    a4.) d,8 a'8 b8 a8 g8
+    d'8 b8 b4 a8 g8 b8 g8(
+    g4.) g8 g8 fis8 e8 d8 \break
+    e4 g8 g8 e8 e8 b'8 a8(
+    a4.) d,8 a'8 b8 a8 g8
+    a4 g8 a4 b4 b8(
+    b2) \breathe d8 d8 c8 b8
+    \pageBreak
+    
   }
 }
 
@@ -199,7 +208,15 @@ voiceAlto = {
     
     % reff A 1 = G
     \key g \major
-    fis2
+    fis2 fis8 g8 fis8 d8
+    e4 e4 g8 g8 g8 fis8(
+    fis4.) d8 fis8 g8 fis8 e8
+    a8 fis8 fis4 fis8 e8 d8 e8(
+    e4.) e8 e8 e8 e8 d8
+    c4 c8 d8 e8 e8 e8 d8(
+    d4.) d8 e8 e8 d8 c8
+    e4 e8 e4 dis4 d8(
+    d2) \breathe g8 g8 g8 g8
   }
 }
 
@@ -254,6 +271,14 @@ voiceTenor = {
     % reff A 1 = G
     \key g \major
     d2 r4 r4
+    c2\f c4 b4
+    a2. r8[ d8]
+    d8 d4 b4 b8 d8 c8
+    b8 b8( b2) r4
+    \tuplet 3/3 {c c c}  b4
+    \tuplet 3/3 {d e fis} r4
+    e8 e4 e4 dis8 dis8 d8(
+    d8) d8 e8 f4( f8 e8 d8)
   }
 }
 
@@ -273,6 +298,7 @@ voiceBass = {
     f4 f8 d4 d8 d8 c8(
     c2) r4 r4
     
+    % reff
     bes2 bes4 bes4
     c2. r8[ c8]
     c8 c4 c4 a8 f'8 e8
@@ -307,6 +333,14 @@ voiceBass = {
     % reff A 1 = G
     \key g \major
     d2 r4 r4
+    c2 c4 c4
+    d2. r8[ d8]
+    d8 d4 d4 b8 g'8 fis8
+    e8 e8( e2) r4
+    \tuplet 3/3 {a a a}  g4
+    \tuplet 3/3 {fis e d} r4
+    c8 c4 c4 c8 c8 g'8(
+    g8) g8 a8 b4( a8 g8 fis8)
   }
 }
 
@@ -341,6 +375,21 @@ lyricAlto = \lyricmode {
   Sem -- bi -- lan pu -- luh li -- ma ta -- hun ber -- kar -- ya
   Ter -- u -- kir ke -- nang -- an dan ra -- gam ce -- ri -- ta
   Ba -- nyak cin -- ta dan ka -- sih ter -- cu -- rah
+  
+  % bait 2  & bridge
+  _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ _ _ _
+  _ _
+  
+  % reff end
+  Kris -- tus Ra -- ja pe -- zia -- rah ha -- ra -- pan
+  Sem -- bi -- lan pu -- luh li -- ma ta -- hun ber -- kar -- ya
+  Ter -- u -- kir ke -- nang -- an dan ra -- gam ce -- ri -- ta
+  Ba -- nyak cin -- ta dan ka -- sih ter -- cu -- rah
+  Kris -- tus Ra -- ja
 }
 
 lyricTenor = \lyricmode {
@@ -364,6 +413,7 @@ lyricBass = \lyricmode {
   A -- khir -- nya ku -- te  -- mu -- kan 
   a -- rah tu -- ju -- an
   
+  % bridge
   Di tem -- pat i -- ni
   a -- ku me -- la -- ya -- ni
   'Tuk me -- wu -- jud -- kan cin -- ta se -- ja -- ti
@@ -371,6 +421,12 @@ lyricBass = \lyricmode {
   ku -- te -- mu -- kan
   sum -- ber hi -- dup ke -- kal
   Haa..
+  
+  % reff end
+  Kris -- tus Ra -- ja
+  Sem -- bi -- lan pu -- luh li -- ma ta -- hun
+  Ke -- na -- ngan dan ce -- ri -- ta
+  Ba -- nyak cin -- ta ka -- sih ter -- cu -- rah
 }
 
 
