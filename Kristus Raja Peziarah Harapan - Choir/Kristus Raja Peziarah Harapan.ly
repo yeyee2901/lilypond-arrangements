@@ -125,7 +125,25 @@ voiceSopran = {
     f8) d4 c8 c8 d8 a'8 g8(
     g2) f8 g8 f8 a8( \break
     a8) g8 f8 g4 f8 f8 bes8(
-    bes8) a8 g4^\markup{"-> reff A -> interlude"} \breathe s4 s4 \bar "" \break
+    bes8) a8 g4^\markup{"-> reff A -> bridge"} \breathe s4 s4 \bar ""
+    \pageBreak
+    
+    % bridge
+    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Bridge" } } 
+    r4 r4 c4 bes8 a8
+    g4 f4 a8 g8 f8 a8 
+    g4 f2 c8 d8
+    f8 d8 c8 d8 e8 f8 a8 f8( \break
+    f4.) f8 c'8 bes8 a8 f8(
+    f8) f8 f8 f4 d4 c8
+    bes'4 a8 g4 f8( g8) g8(
+    g2)( g8) fis8 g8 a8 \break
+    
+    % reff A 1 = G
+    \key g \major
+    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Reff A (1 = G)" } }
+    a2 \breathe a8 b8 a8 g8
+    e4 b'4
   }
 }
 
@@ -167,6 +185,21 @@ voiceAlto = {
     a8) g8 f8 g4 f8 f8 f8(
     f8) f8 e4
     \breathe s4 s4 \bar ""
+    
+    % bridge
+    r4 r4 c'4 bes8 a8
+    g4 f4 f8 e8 f8 e8
+    c4 c2 c8 d8
+    f8 d8 c8 d8 c8 d8 c8 c8(
+    c4.) f8 a8 g8 f8 f8(
+    f8) d8 d8 d4 d4 c8
+    g'4 a8 g4
+    f8( e8) e8(
+    e1)
+    
+    % reff A 1 = G
+    \key g \major
+    fis2
   }
 }
 
@@ -207,6 +240,20 @@ voiceTenor = {
     c8) c8 c8 c4 d8 d8 d8(
     d8) d8 c4
     \breathe s4 s4 \bar ""
+    
+    % bridge
+    r4 r4 c4 c8 c8
+    d4 f4 c8 c8 c8 c8
+    d4 d2 c8 d8
+    c8 c8 c8 c8 c8 c8 c8 a8(
+    a4.) a8 c8 bes8 a8 a8(
+    a8) a8 a8 a4 bes4
+    c8 d4 d8 d4 d8( c8) c8(
+    c2)(c8) b8 c8 d8
+    
+    % reff A 1 = G
+    \key g \major
+    d2 r4 r4
   }
 }
 
@@ -246,6 +293,20 @@ voiceBass = {
     d8) d8 f8 f4 f8 f8 f8(
     f8) d8 c4
     \breathe s4 s4 \bar ""
+    
+    % bridge
+    r4 r4 c4 c8 c8
+    d4 f4 f8 e8 d8 c8
+    bes4 bes2 c8 d8
+    c8 a8 a8 a8 a8 f'8 e8 d8(
+    d4.) d8 d8 d8 d8 bes8(
+    bes8) bes8 c8 d4 d4 d8
+    g4 g8 g4 g8( f8) c8(
+    c1)
+    
+    % reff A 1 = G
+    \key g \major
+    d2 r4 r4
   }
 }
 
@@ -296,6 +357,20 @@ lyricBass = \lyricmode {
   Sem -- bi -- lan pu -- luh li -- ma ta -- hun
   Ke -- na -- ngan dan ce -- ri -- ta
   Ba -- nyak cin -- ta ka -- sih ter -- cu -- rah
+  
+  Huuu...
+  Huuu...
+  Haa...
+  A -- khir -- nya ku -- te  -- mu -- kan 
+  a -- rah tu -- ju -- an
+  
+  Di tem -- pat i -- ni
+  a -- ku me -- la -- ya -- ni
+  'Tuk me -- wu -- jud -- kan cin -- ta se -- ja -- ti
+  Da -- lam ka -- sih -Mu
+  ku -- te -- mu -- kan
+  sum -- ber hi -- dup ke -- kal
+  Haa..
 }
 
 
