@@ -59,7 +59,78 @@ accentMark = -\tweak X-offset #-0.3 -\tweak Y-offset #-1.2 ^\markup{ \magnify #1
 % CHORDS
 chordNames = \chordmode {
   \set noChordSymbol=""
-
+  s1
+  s2
+  d2:m
+  g2:m
+  bes2
+  c2
+  es2
+  bes2
+  c1
+  
+  % bait
+  bes1
+  bes1
+  f1
+  f1
+  g2:m
+  a2:m
+  bes2 g2
+  c1
+  
+  % reff A
+  bes1
+  c1
+  a1:m
+  d1:m
+  g1:m
+  c1
+  
+  bes2
+  bes2:m
+  f1
+  
+  % bait 2
+  s1
+  bes1
+  bes1
+  f1
+  f1
+  d1
+  g1:m
+  bes1
+  c1
+  
+  % bridge
+  s1
+  bes1
+  bes1
+  f1/a
+  d1:m
+  bes1
+  g1:m
+  c1
+  d1
+  c1
+  d1
+  b1:m
+  e1:m
+  a1:m
+  d1
+  c2 c2:m
+  g2 d4:m g4:7/b
+  c1
+  d1
+  b1:m
+  e1:m
+  a1:m
+  b1:m
+  c1
+  b1:m
+  a2:m a4:m b4:m
+  c2 d2
+  g1
 }
 
 % VOICES
@@ -82,6 +153,27 @@ voiceInst = {
     r8[ f'8] g8 c8
     \time 4/4
     c2. r4
+  }
+}
+
+voiceDescant = {
+  \relative es' {
+    s4 * 14
+    s1 * 43
+    
+    \key g \major
+    e'2 e4 e4
+    fis2( d2) 
+    r4 d4 e4 fis4
+    g8 g8 fis8 e8( e2)
+    r4 g4. g8 fis8 e8
+    fis2. e8 e8
+    e4 fis4. g8 e4 
+    fis4 g4. fis8 e8 d8
+    e2^\markup{\italic"rit."} e4 e4
+    g2 fis2
+    g1
+    
   }
 }
 
@@ -141,7 +233,7 @@ voiceSopran = {
     
     % reff A 1 = G
     \key g \major
-    \tweak X-offset #3.5 \sectionLabel \markup { \box { \bold "Reff End (1 = G)" } }
+    \tweak X-offset #6.5 \sectionLabel \markup { \box { \bold "Reff End (1 = G)" } }
     a2 \breathe a8 b8 a8 g8 
     e4 b'4 a8 g8 a8 a8(
     a4.) d,8 a'8 b8 a8 g8
@@ -153,6 +245,17 @@ voiceSopran = {
     b2) \breathe d8 d8 c8 b8
     \pageBreak
     
+    g4 b4 a8 g8 a8 a8(
+    a4.) d,8 a'8 b8 a8 g8
+    d'8 b8 b4 a8 g8 b8 g8(
+    g4.) g8 g8 fis8 e8 d8 \break
+    e4 g8 g8 e8 e8 b'8 a8(
+    a2) r4 r4
+    c2 c4 c4
+    d2 d8 d8 c8 b8 \break
+    a2 a4 b4
+    c2 <c d>2
+    <d g>1 \bar "||"
   }
 }
 
@@ -217,6 +320,17 @@ voiceAlto = {
     d4.) d8 e8 e8 d8 c8
     e4 e8 e4 dis4 d8(
     d2) \breathe g8 g8 g8 g8
+    e4 e4 g8 g8 g8 fis8(
+    fis4.) d8 fis8 g8 fis8 e8
+    a8 fis8 fis4 fis8 e8 d8 e8(
+    e4.) e8 e8 e8 e8 d8
+    c4 c8 d8 e8 e8 e8 d8(
+    d2) r4 r4
+    a'2 a4 g4
+    fis2 g8 g8 g8 g8
+    e2 e4 fis4
+    g2 d2 
+    g1 \bar "||"
   }
 }
 
@@ -233,7 +347,7 @@ voiceTenor = {
     r8[ a8(] bes8 c4 bes8 c8 bes8
     a2.) r4
     g4. a4. r4
-    bes4 bes8 b4 b8 b8 c8(
+    bes4 bes8 bes4 b8 b8 c8(
     c2) r4 r4
     
     % reff A
@@ -279,6 +393,17 @@ voiceTenor = {
     \tuplet 3/3 {d e fis} r4
     e8 e4 e4 dis8 dis8 d8(
     d8) d8 e8 f4( f8 e8 d8)
+    c4 d4 e8 d8 c8 d8(
+    d4.) d8 d8 d8 c8 d8
+    b8 a8 b4 b8 c8 d8 b8(
+    b4.) b8 c8 b8 c8 b8
+    a4 e'8 d8 c8 c8 b8 a8(
+    a2) g8 g8 g8 fis8
+    e4 g8 g8 g8 e8 b'8 a8(
+    a2) e'8 d8 c8 b8
+    c2 c4 d4
+    e2 <c e>2
+    <b g'>1 \bar "||"
   }
 }
 
@@ -340,11 +465,34 @@ voiceBass = {
     \tuplet 3/3 {a a a}  g4
     \tuplet 3/3 {fis e d} r4
     c8 c4 c4 c8 c8 g'8(
-    g8) g8 a8 b4( a8 g8 fis8)
+    g8) g8 a8 b4( a8 g8 f8)
+    
+    
+    e4 e4 c8 c8 c8 d8(
+    d4.) d8 d8 d8 d8 d8
+    b8 b8 b4 d8 d8 d8 e8(
+    e4.) e8 e8 e8 e8 d8 
+    c4 a'8 g8 fis8 e8 fis8 fis8(
+    fis2) 
+    
+    g8 g8 g8 fis8
+    e4 g8 g8 g8 e8 b'8 a8(
+    a2) a8 b8 a8 g8
+    e2 e4 d4
+    c2 d2
+    g1 \bar "||"
   }
 }
 
 %  ---- LYRICS ---------------------
+lyricDescant = \lyricmode {
+  Kris -- tus Ra -- ja
+  Sem -- bi -- lan pu -- luh li -- ma
+  Ra -- gam ce -- ri -- ta
+  Meng -- em -- ban cin -- ta ka -- sih
+  Kris -- tus Ra -- ja
+  Pe -- zia -- rah ha -- ra -- pan
+}
 
 lyricSopran = \lyricmode {
   Di si -- ni 'ku di -- be -- sar -- kan
@@ -389,6 +537,10 @@ lyricAlto = \lyricmode {
   Sem -- bi -- lan pu -- luh li -- ma ta -- hun ber -- kar -- ya
   Ter -- u -- kir ke -- nang -- an dan ra -- gam ce -- ri -- ta
   Ba -- nyak cin -- ta dan ka -- sih ter -- cu -- rah
+  Kris -- tus Ra -- ja pe -- zia -- rah ha -- ra -- pan
+  Sem -- bi -- lan pu -- luh li -- ma ta -- hun ber -- kar -- ya
+  Ter -- u -- kir ke -- nang -- an dan ra -- gam ce -- ri -- ta
+  Cin -- ta ka -- sih
   Kris -- tus Ra -- ja
 }
 
@@ -427,6 +579,13 @@ lyricBass = \lyricmode {
   Sem -- bi -- lan pu -- luh li -- ma ta -- hun
   Ke -- na -- ngan dan ce -- ri -- ta
   Ba -- nyak cin -- ta ka -- sih ter -- cu -- rah
+  
+  pe -- zia -- rah ha -- ra -- pan
+  Sem -- bi -- lan pu -- luh li -- ma ta -- hun ber -- kar -- ya
+  Ter -- u -- kir ke -- nang -- an dan ra -- gam ce -- ri -- ta
+  Me -- ngem -- ban cin -- ta ka -- sih yang mu -- li -- a
+  Kris -- tus Ra -- ja
+  Pe -- zia -- rah Ha -- ra -- pan
 }
 
 
@@ -466,6 +625,25 @@ headerMusicGlobal = {
       }
     }
 
+
+    % Descant
+    \new SolmisasiStaff \with {
+      vocalName = "Desc."
+      shortVocalName = "Desc."
+    } {
+    <<
+      \new SolmisasiVoice = "voiceDescant" { 
+        \solmisasiMusic {
+          \headerMusicGlobal
+          \voiceDescant
+        }
+      }
+    >>  
+    }
+    \new Lyrics \with {
+    } \lyricsto "voiceDescant" {
+      \lyricDescant
+    }
     
     % SOPRAN
     \new SolmisasiStaff \with {
@@ -574,7 +752,6 @@ headerMusicGlobal = {
 \markup {
   \left-column{
     \line { \draw-hline }
-    \line { *Some notes here }
-    \line { *some other notes }
+    %\line { *some other notes }
   }
 }
