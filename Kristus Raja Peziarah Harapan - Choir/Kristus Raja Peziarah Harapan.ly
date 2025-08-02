@@ -7,7 +7,8 @@
   title = "Kristus Raja Peziarah Pengharapan"
   subtitle = "(HUT Kristus Raja 95th)"
   poet = ""
-  composer = "Tata Suara: Yeyee (2025)"  
+  composer = "Musik, Lirik: Christo Rei, Ronald H"
+  arranger = "Tata Suara: Yeyee (2025)"
   tagline = \markup {
     \override #'(box-padding . 1.0)
     \override #'(baseline-skip . 2.7)
