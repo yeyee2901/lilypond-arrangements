@@ -28,7 +28,7 @@
           \with-url "https://henriyulianto.github.io/solmisasi-lily"
           \italic \bold solmisasi-lily
         }
-        \line { rev 1.0 }
+        \line { rev 1.1 }
       }
     }
   }
@@ -489,7 +489,7 @@ lyricDescant = \lyricmode {
   Kris -- tus Ra -- ja
   Sem -- bi -- lan pu -- luh li -- ma
   Ra -- gam ce -- ri -- ta
-  Meng -- em -- ban cin -- ta ka -- sih
+  cin -- ta ka -- sih ter -- cu -- rah
   Kris -- tus Ra -- ja
   Pe -- zia -- rah ha -- ra -- pan
 }
@@ -583,7 +583,8 @@ lyricBass = \lyricmode {
   pe -- zia -- rah ha -- ra -- pan
   Sem -- bi -- lan pu -- luh li -- ma ta -- hun ber -- kar -- ya
   Ter -- u -- kir ke -- nang -- an dan ra -- gam ce -- ri -- ta
-  Me -- ngem -- ban cin -- ta ka -- sih yang mu -- li -- a
+  
+  Ba -- nyak cin -- ta dan ka -- sih yang ter -- cu -- rah
   Kris -- tus Ra -- ja
   Pe -- zia -- rah Ha -- ra -- pan
 }
